@@ -10,20 +10,37 @@
     <h2 class="sub-title">Mostre os seus conhecimentos &</h2>
     <h2 class="sub-title">Receba diversas oportunidades</h2>
 
-    <form class="container-form">
+    <form @submit.prevent="createUser" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
-        <input class="input" name="email" type="email" required />
+        <input
+          v-model="email"
+          class="input"
+          name="email"
+          type="email"
+          required
+        />
       </div>
 
       <div class="item-form">
         <label class="label" for="password">Senha</label>
-        <input class="input" name="password" type="password" required />
+        <input
+          v-model="password"
+          class="input"
+          name="password"
+          type="password"
+          required
+        />
       </div>
 
       <div class="item-form item-form2">
-        <label class="label" for="password">Confirmar senha</label>
-        <input class="input" name="password" type="password" />
+        <label class="label" for="confirmPassword">Confirmar senha</label>
+        <input
+          v-model="confirmPassword"
+          class="input"
+          name="confirmPassword"
+          type="password"
+        />
       </div>
 
       <button class="button-login" type="submit">Criar conta</button>
@@ -68,7 +85,28 @@
 
 <script>
 export default {
-  name: "Login",
+  name: "Sigin",
+  data() {
+    return {
+      email: "",
+      password: "",
+      confirmPassword: "",
+    };
+  },
+  methods: {
+    async createUser() {
+      try {
+        const res = await this.$firebase
+          .auth()
+          .createUserWithEmailAndPassword(this.email, this.password);
+        const id = res.user?.uid ?? "";
+        localStorage.setItem("toke-login", id);
+       // this.$router.push({ name: "Home" });
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
   mounted() {
     console.log(this.$firebase);
   },

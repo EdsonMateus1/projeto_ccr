@@ -198,7 +198,6 @@ export default {
   font-size: 20px;
   padding: 10px;
   box-shadow: -1px 0px 4px 0px rgba(0, 0, 0, 0.6);
-  color: #0d3358;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,6 +244,13 @@ export default {
 
   .button-access:last-child {
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and(max-width: 2480px) {
+  .container-page-login {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 </style>

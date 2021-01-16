@@ -102,6 +102,7 @@ export default {
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
        // this.$router.push({ name: "Home" });
+       alert("criado")
       } catch (error) {
         console.log(error);
       }

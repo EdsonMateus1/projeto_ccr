@@ -9,8 +9,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
-=======
 }
 
 button {
@@ -18,8 +16,7 @@ button {
   box-shadow: none;
   background: none;
 }
-button:hover{
+button:hover {
   cursor: pointer;
->>>>>>> origin/edson
 }
 </style>

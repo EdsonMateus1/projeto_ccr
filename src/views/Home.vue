@@ -15,7 +15,16 @@
       </div>
     </div>
 
-    <div class="container-card"></div>
+    <div class="container-card">
+      <div class="card">
+        <div class="card-header">
+          <img src="../assets/Group_1.png" />
+        </div>
+        <h3 class="title-card">Grupos de estudos</h3>
+        <span class="description-card">Descubra bibliotexas para estudo,</span>
+        <span class="description-card">grupos para te incentivar a ir mais longe!</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,7 +62,7 @@ export default {
 }
 .title2-home {
   font-size: 25px;
-  line-height: 24px;
+  line-height: 34px;
 }
 .container-motivational-text {
   display: flex;
@@ -61,7 +70,7 @@ export default {
   flex-direction: column;
   margin: 0 auto;
   width: 70%;
-  height: 200px;
+  height: 150px;
 }
 
 .container-logo {
@@ -74,5 +83,10 @@ export default {
 }
 .container-card {
   width: 100%;
+  height: 200px;
+}
+.card {
+}
+.card-header {
 }
 </style>

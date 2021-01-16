@@ -11,13 +11,7 @@
     <form @submit.prevent="createUser" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
-        <input
-          v-model="email"
-          class="input"
-          name="email"
-          type="email"
-          required
-        />
+        <input v-model="email" class="input" name="email" type="email" required />
       </div>
 
       <div class="item-form">
@@ -251,9 +245,6 @@ export default {
   flex-direction: column;
   gap: 1.2em;
   margin-top: 2em;
-}
-.button-access:last-child {
-  margin-bottom: 70px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {

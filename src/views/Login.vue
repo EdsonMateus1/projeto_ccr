@@ -31,7 +31,7 @@
         />
       </div>
 
-      <button class="button-login" type="submit">Criar conta</button>
+      <button class="button-login" type="submit">Entrar</button>
     </form>
 
     <div class="container-access">

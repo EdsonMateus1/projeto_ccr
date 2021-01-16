@@ -21,6 +21,13 @@
   line-height: 0.5em;
 }
 
+.title2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 button {
   border: none;
   box-shadow: none;
@@ -30,8 +37,5 @@ button:hover {
   cursor: pointer;
 }
 @media (min-width: 1024px) {
-  body {
-    overflow: hidden;
-  }
 }
 </style>

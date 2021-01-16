@@ -15,7 +15,7 @@
 <script>
 export default {};
 </script>
-<style>
+<style scoped>
 .header {
   display: flex;
   width: 100%;
@@ -33,5 +33,6 @@ export default {};
   color: #545454;
   font-size: 20px;
   line-height: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 </style>

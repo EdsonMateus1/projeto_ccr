@@ -97,11 +97,9 @@ export default {
 .button-login {
   padding: 15px;
   border: none;
-
   margin-top: 1.4em;
   border-radius: 4px;
   background-color: #0d81f5;
-
   width: 80%;
   margin-top: 30px;
   border-radius: 10px;

@@ -254,6 +254,9 @@ export default {
   }
 }
 @media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
   .container-page-login {
     margin-top: 10%;
     margin-right: 50%;
@@ -266,14 +269,15 @@ export default {
     width: 50%;
     height: 500px;
     position: absolute;
+    top: 35%;
   }
 
   .title,
   .title2 {
-    font-size: 40px;
+    font-size: 50px;
   }
   .sub-title {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 28px;
   }
 

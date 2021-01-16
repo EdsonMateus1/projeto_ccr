@@ -1,12 +1,17 @@
 <template>
   <div class="home">
     <Header />
-    <div class="container-img-central"></div>
+
+    <div class="img-container">
+      <div class="container-img-central"></div>
+    </div>
+
     <div class="container-logo">
       <img src="../assets/ccrlogo.png" />
       <div class="divider"></div>
       <h2 class="title2">Viva seu caminho.</h2>
     </div>
+
     <div class="container-motivational-text">
       <div>
         <h2 class="title2 title2-home">conhecimento é poder</h2>
@@ -56,6 +61,7 @@
         </div>
       </div>
     </div>
+
     <div class="quebra">
       <blockquote class="quote-externo container">
         <p>
@@ -124,12 +130,20 @@ export default {
 </script>
 
 <style scoped>
+.home {
+}
 .container-img-central {
   background-image: url("../assets/Group_7.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 500px;
   width: 90%;
+}
+.img-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .divider {
   width: 3px;
@@ -167,6 +181,10 @@ export default {
   width: 100%;
   height: 400px;
   margin-top: 8%;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
 }
 .card {
   width: 300px;

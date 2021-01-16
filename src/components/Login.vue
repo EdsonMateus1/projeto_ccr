@@ -1,8 +1,7 @@
 <template>
   <div class="container-page-login">
-    <div class="imagem-login"></div>
 
-    <h1 class="title">Cadastrar</h1>
+    <h1 class="title">Vai trabalhar</h1>
 
     <h2 class="sub-title">Mostre seus conhecimentos</h2>
     <h2 class="sub-title">e as empresas te descubrirão!</h2>
@@ -36,44 +35,41 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .container-page-login {
   height: 100%;
-  padding: 25px;
-  height: 90%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-family: Helvetica, sans-serif;
 }
+
 .container-form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 1em;
 }
+
 .item-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 10px;
+  gap: .8em;
   color: #545454;
 }
-.container-google {
-  margin-top: 40px;
-}
-.imagem-login {
-  height: 150px;
-}
+
+
 .input {
   border: none;
   background-color: #f5f5f5;
   padding: 10px;
   border-radius: 4px;
-  height: 54px;
+  height: 4em;
 }
 .email-container {
-  margin: 30px 0px;
+  margin: 1.2em 0px;
 }
 
 .title {
@@ -99,7 +95,7 @@ export default {
 .button-login {
   padding: 15px;
   border: none;
-  margin-top: 30px;
+  margin-top: 1.4em;
   border-radius: 4px;
   background-color: #0d81f5;
   color: #f5f5f5;
@@ -122,7 +118,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 1.2em;
+  margin-top:  2em;
 }
 </style>

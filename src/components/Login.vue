@@ -1,10 +1,14 @@
 <template>
   <div class="container-page-login">
+<<<<<<< HEAD
 
     <h1 class="title">Vai trabalhar</h1>
+=======
+    <h1 class="title">Ready to Work</h1>
+>>>>>>> origin/pedro
 
     <h2 class="sub-title">Mostre seus conhecimentos</h2>
-    <h2 class="sub-title">e as empresas te descubrirão!</h2>
+    <h2 class="sub-title">e deixe que as empresas te notem!</h2>
 
     <form class="container-form">
       <div class="item-form email-container">
@@ -21,8 +25,8 @@
     </form>
 
     <div class="container-access">
-      <button class="button-access">Contiunar com google</button>
-      <button class="button-access">Contiunar com Facebook</button>
+      <button class="button-access">Continuar com google</button>
+      <button class="button-access">Continuar com Facebook</button>
     </div>
   </div>
 </template>
@@ -38,7 +42,11 @@ export default {
 
 .container-page-login {
   height: 100%;
+<<<<<<< HEAD
   padding: 20px;
+=======
+  padding: 25px;
+>>>>>>> origin/pedro
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +57,12 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   margin-top: 1em;
+=======
+  align-items: center;
+  margin-top: 30px;
+>>>>>>> origin/pedro
 }
 
 .item-form {
@@ -73,18 +86,19 @@ export default {
 }
 
 .title {
+  text-transform: uppercase;
   font-size: 40px;
   font-weight: 600;
-  letter-spacing: 0.8px;
   margin-bottom: 20px;
-  color: #545454;
+  color: #fe1243;
 }
 .sub-title {
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 16px;
   letter-spacing: 1px;
-  line-height: 25px;
+  line-height: 20px;
   color: #545454;
+  font-family: helvetica;
 }
 
 .label {
@@ -95,22 +109,31 @@ export default {
 .button-login {
   padding: 15px;
   border: none;
+<<<<<<< HEAD
   margin-top: 1.4em;
   border-radius: 4px;
   background-color: #0d81f5;
+=======
+  width: 80%;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #fe1243;
+>>>>>>> origin/pedro
   color: #f5f5f5;
   font-size: 20px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
 }
 .button-access {
+  align-items: center;
   border: 1px solid gray;
   border-radius: 20px;
-  width: 100%;
+  width: 95%;
   text-align: center;
   font-size: 20px;
   padding: 10px;
   box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.6);
-  color: #1160af;
+  color: black;
 }
 .container-access {
   width: 95%;

@@ -109,15 +109,13 @@ export default {
   methods: {
     async createUser() {
       try {
-        const validations = this.validations;
-        if (validations) {
+        if (this.validations) {
           const res = await this.$firebase
             .auth()
             .createUserWithEmailAndPassword(this.email, this.password);
           const id = res.user?.uid ?? "";
           localStorage.setItem("toke-login", id);
-          // this.$router.push({ name: "Home" });
-          alert("Cadastro realizado com sucesso!");
+          this.$router.push({ name: "Home" });
         } else {
           return;
         }

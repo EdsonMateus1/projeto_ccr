@@ -34,8 +34,8 @@
       <button class="button-login" type="submit">Entrar</button>
     </form>
 
-    <div class="container-access">
-      <button class="button-access">
+    <!-- <div class="container-access">
+      <button @click.passive.stop="googleLogin" class="button-access">
         <svg
           style="margin-right: 0px"
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,10 @@
         </svg>
         <span class="span-access">Entre com o Facebook</span>
       </button>
-    </div>
+    </div> -->
+    <router-link class="link-register" :to="{ name: 'Sign' }"
+      >Faça seu cadastro</router-link
+    >
   </div>
 </template>
 
@@ -88,7 +91,8 @@ export default {
           .signInWithEmailAndPassword(this.email, this.password);
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
-        // this.$router.push({ name: "Home" });
+        this.$router.push({ name: "Home" });
+        alert("logo");
       } catch (error) {
         console.log(error);
       }
@@ -197,6 +201,12 @@ export default {
   font-weight: bold;
 }
 
+.button-cadastrar {
+  width: 65%;
+  padding: 5px;
+  background-color: black;
+}
+
 .button-access {
   border: 1px solid #545454;
   border-radius: 10px;
@@ -219,7 +229,10 @@ export default {
   gap: 1.2em;
   margin-top: 2em;
 }
-
+.link-register {
+  margin-top: 30px;
+  font-size: 20px;
+}
 .span-access {
   font-size: 16px;
 }
@@ -264,7 +277,7 @@ export default {
     overflow: hidden;
   }
   .container-page-login {
-    margin-top: 10%;
+    margin-top: 6%;
     margin-right: 50%;
     align-items: center;
     padding: 0px;

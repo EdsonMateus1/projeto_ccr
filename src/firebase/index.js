@@ -3,6 +3,7 @@ import "firebase/auth";
 import "firebase/storage";
 import "firebase/database";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCqmsosdSF8B6JHUaGy--3Dm3tpCTa0qv4",
   authDomain: "hackathonccr-cba21.firebaseapp.com",

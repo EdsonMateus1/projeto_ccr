@@ -66,14 +66,13 @@
 <script>
 export default {
   name: "Login",
-  
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container-page-login {
-  height: 100%;
+  min-height: 100%;
   padding: 20px 0px;
   display: flex;
   flex-direction: column;
@@ -113,7 +112,6 @@ export default {
   flex-direction: column;
   margin-top: 1em;
   align-items: center;
-  margin-top: 30px;
 }
 
 .item-form {
@@ -185,7 +183,6 @@ export default {
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
   .container-page-login {
-    height: 100%;
     padding: 40px 40px;
   }
 

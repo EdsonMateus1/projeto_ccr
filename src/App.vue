@@ -6,11 +6,19 @@
 
 <style>
 * {
-  min-height: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fe1243;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 0.5em;
 }
 
 button {

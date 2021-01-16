@@ -103,8 +103,7 @@ export default {
   methods: {
     async createUser() {
       try {
-        const validations = this.validations;
-        if (validations) {
+        if (this.validations) {
           const res = await this.$firebase
             .auth()
             .createUserWithEmailAndPassword(this.email, this.password);

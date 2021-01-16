@@ -1,12 +1,8 @@
 <template>
   <div class="container-page-login">
-<<<<<<< HEAD
 
-    <h1 class="title">Vai trabalhar</h1>
-=======
     <h1 class="title">Ready to Work</h1>
->>>>>>> origin/pedro
-
+  
     <h2 class="sub-title">Mostre seus conhecimentos</h2>
     <h2 class="sub-title">e deixe que as empresas te notem!</h2>
 
@@ -39,14 +35,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .container-page-login {
   height: 100%;
-<<<<<<< HEAD
   padding: 20px;
-=======
   padding: 25px;
->>>>>>> origin/pedro
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,22 +49,18 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   margin-top: 1em;
-=======
   align-items: center;
   margin-top: 30px;
->>>>>>> origin/pedro
 }
 
 .item-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: .8em;
+  gap: 0.8em;
   color: #545454;
 }
-
 
 .input {
   border: none;
@@ -109,16 +97,16 @@ export default {
 .button-login {
   padding: 15px;
   border: none;
-<<<<<<< HEAD
+
   margin-top: 1.4em;
   border-radius: 4px;
   background-color: #0d81f5;
-=======
+
   width: 80%;
   margin-top: 30px;
   border-radius: 10px;
   background-color: #fe1243;
->>>>>>> origin/pedro
+
   color: #f5f5f5;
   font-size: 20px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
@@ -142,6 +130,6 @@ export default {
   align-items: center;
   flex-direction: column;
   gap: 1.2em;
-  margin-top:  2em;
+  margin-top: 2em;
 }
 </style>

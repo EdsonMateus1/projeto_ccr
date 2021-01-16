@@ -108,6 +108,7 @@ export default {
 .card-header {
   padding: 30px;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  background-color: #7e2033;
 }
 </style>

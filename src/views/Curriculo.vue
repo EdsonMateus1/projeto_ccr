@@ -40,6 +40,7 @@
 <script>
 export default {};
 </script>
+<<<<<<< HEAD
 <style>
 .container-page-login {
   min-height: 100%;
@@ -188,3 +189,7 @@ export default {};
   }
 }
 </style>
+=======
+
+<style></style>
+>>>>>>> 4d0337c72335a737c61b76688a7f0a40c97841e4

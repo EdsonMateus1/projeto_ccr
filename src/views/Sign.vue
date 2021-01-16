@@ -11,7 +11,13 @@
     <form @submit.prevent="createUser" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
-        <input v-model="email" class="input" name="email" type="email" required />
+        <input
+          v-model="email"
+          class="input"
+          name="email"
+          type="email"
+          required
+        />
       </div>
 
       <div class="item-form">
@@ -89,11 +95,11 @@ export default {
   computed: {
     validations() {
       if (this.password.length <= 6 && this.confirmPassword.length <= 6) {
-        alert("tem que ter mais de 6 carcteres");
+        alert("Senha inválida! Digite pelo menos 6 caracteres");
         return false;
       }
       if (this.password != this.confirmPassword) {
-        alert("senha nao sao iguais");
+        alert("Senhas não coincidem");
         return false;
       } else {
         return true;
@@ -111,7 +117,7 @@ export default {
           const id = res.user?.uid ?? "";
           localStorage.setItem("toke-login", id);
           // this.$router.push({ name: "Home" });
-          alert("criado");
+          alert("Cadastro realizado com sucesso!");
         } else {
           return;
         }
@@ -292,7 +298,7 @@ export default {
     width: 50%;
     height: 500px;
     position: absolute;
-    top: 35%;
+    top: 25%;
   }
 
   .title,
@@ -305,10 +311,10 @@ export default {
   }
 
   .item-form {
-    width: 90%;
+    width: 70%;
   }
   .button-login {
-    width: 90%;
+    width: 50%;
   }
 }
 </style>

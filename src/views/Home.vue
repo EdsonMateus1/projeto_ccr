@@ -136,8 +136,8 @@ export default {
   background-image: url("../assets/Group_7.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 500px;
-  width: 90%;
+  height: 450px;
+  width: 79%;
 }
 .img-container {
   width: 100%;
@@ -225,9 +225,11 @@ export default {
   padding-bottom: 50px;
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 900px) {
   .home {
     padding: 0px;
+  }
+  .container-img-central {
   }
 }
 

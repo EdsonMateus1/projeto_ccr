@@ -1,9 +1,12 @@
 <template>
   <div class="header">
     <h1 class="title">Ready to work</h1>
+    <Menu class="menu" />
     <div class="container-links">
       <router-link class="header-links" :to="{ name: 'Home' }">Home </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">Curriculo </router-link>
+      <router-link class="header-links" :to="{ name: 'Curriculo' }"
+        >Curriculo
+      </router-link>
       <router-link class="header-links" :to="{ name: 'Home' }"
         >Oportunidades
       </router-link>
@@ -13,7 +16,12 @@
   </div>
 </template>
 <script>
-export default {};
+import Menu from "../components/Menu";
+export default {
+  components: {
+    Menu,
+  },
+};
 </script>
 <style scoped>
 .header {
@@ -28,6 +36,9 @@ export default {};
   display: flex;
   gap: 20px;
 }
+.title {
+  font-size: 30px;
+}
 .header-links {
   text-decoration: none;
   color: #545454;
@@ -38,15 +49,23 @@ export default {};
 a {
   display: block;
 }
-@media only screen and (max-width: 1240px) {
-  .header {
-    padding: 0px;
-  }
+.menu {
+  display: none;
+}
+@media only screen and (max-width: 700px) {
   .title {
     font-size: 20px;
   }
   .container-links {
     flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: -15px;
   }
 }
 </style>

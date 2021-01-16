@@ -37,9 +37,6 @@ button:hover {
   cursor: pointer;
 }
 @media (min-width: 1024px) {
-<<<<<<< HEAD
   
-=======
->>>>>>> 4d0337c72335a737c61b76688a7f0a40c97841e4
 }
 </style>

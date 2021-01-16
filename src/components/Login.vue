@@ -78,7 +78,6 @@ export default {
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 600;
-
   margin-bottom: 20px;
   color: #fe1243;
 }

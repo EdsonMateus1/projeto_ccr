@@ -110,8 +110,7 @@ export default {
             .createUserWithEmailAndPassword(this.email, this.password);
           const id = res.user?.uid ?? "";
           localStorage.setItem("toke-login", id);
-          // this.$router.push({ name: "Home" });
-          alert("criado");
+          this.$router.push({ name: "Home" });
         } else {
           return;
         }

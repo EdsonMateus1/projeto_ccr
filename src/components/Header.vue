@@ -52,10 +52,15 @@ a {
 .menu {
   display: none;
 }
-@media only screen and (max-width: 700px) {
-  .title {
-    font-size: 20px;
+@media only screen and (max-width: 800px) {
+  .header {
+    padding: 0px 10px;
+    height: 100px;
   }
+  .title {
+    line-height: 1;
+  }
+
   .container-links {
     flex-direction: column;
     height: 0px;
@@ -64,7 +69,7 @@ a {
   .menu {
     display: block;
     position: absolute;
-    right: 100px;
+    right: 90px;
     top: -15px;
   }
 }

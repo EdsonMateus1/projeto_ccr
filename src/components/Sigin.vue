@@ -69,6 +69,9 @@
 <script>
 export default {
   name: "Login",
+  mounted() {
+    console.log(this.$firebase);
+  },
 };
 </script>
 

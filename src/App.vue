@@ -7,7 +7,7 @@
 
 <script>
 
-import Login from "./components/Login";
+import Login from "./components/Sigin";
 
 export default {
   name: 'App',

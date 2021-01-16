@@ -31,7 +31,6 @@
         />
       </div>
 
-
       <button class="button-login" type="submit">Criar conta</button>
     </form>
 
@@ -54,7 +53,7 @@
       </button>
       <button class="button-access">
         <svg
-          style="margin-left: 30px"
+          style="margin-left: -20px"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -205,7 +204,6 @@ export default {
   font-size: 20px;
   padding: 10px;
   box-shadow: -1px 0px 4px 0px rgba(0, 0, 0, 0.6);
-  color: #0d3358;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,8 +219,9 @@ export default {
   gap: 1.2em;
   margin-top: 2em;
 }
-.button-access:last-child {
-  margin-bottom: 70px;
+
+.span-access {
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
@@ -252,5 +251,8 @@ export default {
   .button-access:last-child {
     margin-bottom: 20px;
   }
+}
+
+@media only screen and(max-width: 2480px) {
 }
 </style>

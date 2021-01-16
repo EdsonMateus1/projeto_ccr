@@ -1,5 +1,8 @@
 <template>
   <div class="container-page-login">
+    <div class="img-intro">
+      <img src="../assets/img-tablet.png" alt="img-intro" />
+    </div>
     <h1 class="title">Ready to Work</h1>
     <h1 class="title2">Ready to Work</h1>
 
@@ -49,6 +52,15 @@ export default {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.img-intro {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 90%;
+  margin: 30px 0;
+}
+
 .title {
   text-transform: uppercase;
   font-size: 40px;
@@ -137,13 +149,14 @@ export default {
   align-items: center;
   border: 1px solid gray;
   border-radius: 20px;
-  width: 95%;
+  width: 75%;
   text-align: center;
   font-size: 20px;
   padding: 10px;
   box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.6);
   color: black;
 }
+
 .container-access {
   width: 95%;
   display: flex;
@@ -152,6 +165,9 @@ export default {
   flex-direction: column;
   gap: 1.2em;
   margin-top: 2em;
+}
+.button-access:last-child {
+  margin-bottom: 70px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
@@ -171,10 +187,6 @@ export default {
 
   .sub-title {
     font-size: 22px;
-  }
-
-  .button-access {
-    width: 50%;
   }
 }
 </style>

@@ -109,6 +109,5 @@ export default {
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 30px;
-  opacity: 0;
 }
 </style>

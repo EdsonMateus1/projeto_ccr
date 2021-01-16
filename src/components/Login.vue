@@ -22,10 +22,11 @@
     <div class="container-access">
       <button class="button-access">
         <svg
+          style="margin-right: 10px"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
-          fill="#0d81f5"
+          fill="#fe1243"
           class="bi bi-google"
           viewBox="0 0 16 16"
         >
@@ -37,11 +38,11 @@
       </button>
       <button class="button-access">
         <svg
-          style="margin-left: 20px"
+          style="margin-left: 10px"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
-          fill="#0d81f5"
+          fill="#fe1243"
           class="bi bi-facebook"
           viewBox="0 0 16 16"
         >
@@ -127,7 +128,6 @@ export default {
   border: none;
   margin-top: 1.4em;
   border-radius: 4px;
-  background-color: #0d81f5;
   width: 80%;
   margin-top: 30px;
   border-radius: 10px;
@@ -138,10 +138,6 @@ export default {
   font-weight: bold;
 }
 .button-access {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
   border: 1px solid #545454;
   border-radius: 20px;
   width: 95%;
@@ -149,6 +145,10 @@ export default {
   padding: 10px;
   box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.6);
   color: #0d3358;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 .container-access {
   width: 95%;

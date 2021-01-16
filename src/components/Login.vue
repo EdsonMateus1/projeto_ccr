@@ -1,5 +1,8 @@
 <template>
   <div class="container-page-login">
+    <div class="img-intro">
+      <img src="../assets/img-tablet.png" alt="img-intro" />
+    </div>
     <h1 class="title">Ready to Work</h1>
     <h1 class="title2">Ready to Work</h1>
 
@@ -29,7 +32,7 @@
     <div class="container-access">
       <button class="button-access">
         <svg
-          style="margin-right: 0px;"
+          style="margin-right: 0px"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -45,7 +48,7 @@
       </button>
       <button class="button-access">
         <svg
-        style="margin-left: 30px;"
+          style="margin-left: 30px"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -79,6 +82,15 @@ export default {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.img-intro {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 90%;
+  margin: 30px 0;
+}
+
 .title {
   text-transform: uppercase;
   font-size: 40px;
@@ -171,6 +183,7 @@ export default {
   justify-content: center;
   gap: 10px;
 }
+
 .container-access {
   width: 100%;
   display: flex;
@@ -179,6 +192,9 @@ export default {
   flex-direction: column;
   gap: 1.2em;
   margin-top: 2em;
+}
+.button-access:last-child {
+  margin-bottom: 70px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
@@ -197,10 +213,6 @@ export default {
 
   .sub-title {
     font-size: 22px;
-  }
-
-  .button-access {
-    width: 50%;
   }
 }
 </style>

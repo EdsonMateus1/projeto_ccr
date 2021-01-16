@@ -66,6 +66,7 @@
 <script>
 export default {
   name: "Login",
+  
 };
 </script>
 
@@ -73,7 +74,7 @@ export default {
 <style scoped>
 .container-page-login {
   height: 100%;
-  padding: 20px 25px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +108,7 @@ export default {
 }
 
 .container-form {
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin-top: 1em;
@@ -132,14 +133,14 @@ export default {
   background-color: #f5f5f5;
   padding: 10px;
   border-radius: 4px;
-  height: 4em;
+  height: 3.5em;
 }
 .email-container {
   margin: 1.2em 0px;
 }
 
 .label {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 19.2px;
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -149,10 +150,7 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  border-radius: 4px;
-  background-color: #0d81f5;
-
-  width: 70%;
+  width: 90%;
   margin-top: 30px;
   border-radius: 10px;
   background-color: #fe1243;
@@ -173,6 +171,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 .container-access {
   width: 100%;

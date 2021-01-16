@@ -254,5 +254,9 @@ export default {
 }
 
 @media only screen and(max-width: 2480px) {
+  .container-page-login {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 </style>

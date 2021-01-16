@@ -275,7 +275,7 @@ export default {
   }
 }
 
-@media only screen and(min-width: 701px) and (max-width: 1025px) {
+@media only screen and(min-width: 701px) and (max-width: 1024px) {
   .title {
     margin-top: 40px;
   }
@@ -285,6 +285,31 @@ export default {
   }
 }
 
-@media only scren and (max-width: 1920px) {
+@media (min-width: 1024px) {
+  .container-page-login {
+    margin-top: 10%;
+    margin-right: 50%;
+    align-items: center;
+  }
+  .img-intro {
+    background-size: contain;
+    margin-left: 98%;
+    width: 50%;
+    height: 500px;
+    position: absolute;
+  }
+
+  .title,
+  .title2 {
+    font-size: 60px;
+  }
+  .sub-title {
+    font-size: 30px;
+    line-height: 28px;
+  }
+
+  .item-form {
+    width: 70%;
+  }
 }
 </style>

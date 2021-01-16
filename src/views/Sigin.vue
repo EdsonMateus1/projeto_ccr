@@ -144,9 +144,9 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   width: 95%;
-  height: 300px;
+  height: 250px;
   margin-bottom: 20px;
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .title {
@@ -276,7 +276,7 @@ export default {
   }
 }
 
-@media only screen and(min-width: 701px) and (max-width: 1024px) {
+@media only screen and(min-width: 701px) and (max-width: 1025px) {
   .title {
     margin-top: 40px;
   }
@@ -284,5 +284,8 @@ export default {
   .button-access:last-child {
     margin-bottom: 20px;
   }
+}
+
+@media only scren and (max-width: 1920px) {
 }
 </style>

@@ -277,10 +277,14 @@ export default {
 }
 
 @media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
   .container-page-login {
     margin-top: 10%;
     margin-right: 50%;
     align-items: center;
+    padding: 0px;
   }
   .img-intro {
     background-size: contain;
@@ -288,19 +292,23 @@ export default {
     width: 50%;
     height: 500px;
     position: absolute;
+    top: 35%;
   }
 
   .title,
   .title2 {
-    font-size: 60px;
+    font-size: 50px;
   }
   .sub-title {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 28px;
   }
 
   .item-form {
-    width: 70%;
+    width: 90%;
+  }
+  .button-login {
+    width: 90%;
   }
 }
 </style>

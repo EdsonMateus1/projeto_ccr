@@ -20,4 +20,9 @@ button {
 button:hover {
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+}
 </style>

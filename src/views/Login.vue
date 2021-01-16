@@ -259,4 +259,39 @@ export default {
     align-items: flex-start;
   }
 }
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+  .container-page-login {
+    margin-top: 10%;
+    margin-right: 50%;
+    align-items: center;
+    padding: 0px;
+  }
+  .img-intro {
+    background-size: contain;
+    margin-left: 98%;
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    top: 35%;
+  }
+
+  .title,
+  .title2 {
+    font-size: 50px;
+  }
+  .sub-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .item-form {
+    width: 90%;
+  }
+  .button-login {
+    width: 90%;
+  }
+}
 </style>

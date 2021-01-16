@@ -46,7 +46,7 @@
       <button class="button-login" type="submit">Criar conta</button>
     </form>
 
-    <div class="container-access">
+    <!-- <div class="container-access">
       <button class="button-access">
         <svg
           style="margin-right: 0px"
@@ -79,7 +79,7 @@
         </svg>
         <span class="span-access">Entre com o Facebook</span>
       </button>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -94,15 +94,31 @@ export default {
     };
   },
   methods: {
+    validations() {
+      if (
+        this.password == this.confirmPassword &&
+        this.password.length >= 6 &&
+        this.confirmPassword.length >= 6
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
     async createUser() {
       try {
-        const res = await this.$firebase
-          .auth()
-          .createUserWithEmailAndPassword(this.email, this.password);
-        const id = res.user?.uid ?? "";
-        localStorage.setItem("toke-login", id);
-        // this.$router.push({ name: "Home" });
-        alert("Cadastro realizado com sucesso!");
+        console.log(this.validations());
+        if (this.validations()) {
+          const res = await this.$firebase
+            .auth()
+            .createUserWithEmailAndPassword(this.email, this.password);
+          const id = res.user?.uid ?? "";
+          localStorage.setItem("toke-login", id);
+          // this.$router.push({ name: "Home" });
+          alert("criado");
+        } else {
+          alert("senha invalida");
+        }
       } catch (error) {
         console.log(error);
       }
@@ -118,7 +134,7 @@ export default {
 <style scoped>
 .container-page-login {
   min-height: 100%;
-  padding: 20px 0px;
+  padding: 10px 0px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,7 +221,7 @@ export default {
   border: none;
   margin-top: 1.4em;
   width: 90%;
-  margin-top: 30px;
+  margin-top: 40px;
   border-radius: 10px;
   background-color: #fe1243;
   color: #f5f5f5;

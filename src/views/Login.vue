@@ -1,8 +1,6 @@
 <template>
   <div class="container-page-login">
-    <div class="img-intro">
-      <img src="../assets/img-tablet.png" alt="img-intro" />
-    </div>
+    <div class="img-intro"></div>
     <h1 class="title">Ready to Work</h1>
     <h1 class="title2">Ready to Work</h1>
 
@@ -33,15 +31,6 @@
         />
       </div>
 
-      <div class="item-form item-form2">
-        <label class="label" for="confirmPassword">Confirmar senha</label>
-        <input
-          v-model="confirmPassword"
-          class="input"
-          name="confirmPassword"
-          type="password"
-        />
-      </div>
 
       <button class="button-login" type="submit">Criar conta</button>
     </form>
@@ -90,26 +79,21 @@ export default {
     return {
       email: "",
       password: "",
-      confirmPassword: "",
     };
   },
   methods: {
-    async createUser() {
+    async doLogin() {
       try {
         const res = await this.$firebase
           .auth()
-          .createUserWithEmailAndPassword(this.email, this.password);
+          .signInWithEmailAndPassword(this.email, this.password);
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
         // this.$router.push({ name: "Home" });
-        alert("Cadastro realizado com sucesso!");
       } catch (error) {
         console.log(error);
       }
     },
-  },
-  mounted() {
-    console.log(this.$firebase);
   },
 };
 </script>
@@ -118,7 +102,7 @@ export default {
 <style scoped>
 .container-page-login {
   min-height: 100%;
-  padding: 20px 0px;
+  padding: 10px 0px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,15 +110,15 @@ export default {
 }
 
 .img-intro {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  height: 90%;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  background-image: url("../assets/img-tablet.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 200px;
 }
 
 .title {
+  margin-top: 20px;
   text-transform: uppercase;
   font-size: 40px;
   font-weight: bold;
@@ -173,7 +157,7 @@ export default {
 .item-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   gap: 0.8em;
   color: #545454;
 }
@@ -204,8 +188,8 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 90%;
-  margin-top: 30px;
+  width: 75%;
+  margin-top: 40px;
   border-radius: 10px;
   background-color: #fe1243;
   color: #f5f5f5;
@@ -257,6 +241,16 @@ export default {
 
   .sub-title {
     font-size: 22px;
+  }
+}
+
+@media only screen and(min-width: 701px) and (max-width: 1024px) {
+  .title {
+    margin-top: 40px;
+  }
+
+  .button-access:last-child {
+    margin-bottom: 20px;
   }
 }
 </style>

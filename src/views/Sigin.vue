@@ -38,6 +38,7 @@
           class="input"
           name="confirmPassword"
           type="password"
+          required
         />
       </div>
 
@@ -91,22 +92,25 @@ export default {
       confirmPassword: "",
     };
   },
-  methods: {
+  computed: {
     validations() {
-      if (
-        this.password == this.confirmPassword &&
-        this.password.length >= 6 &&
-        this.confirmPassword.length >= 6
-      ) {
-        return true;
-      } else {
+      if (this.password.length <= 6 && this.confirmPassword.length <= 6) {
+        alert("tem que ter mais de 6 carcteres");
         return false;
       }
+      if (this.password != this.confirmPassword) {
+        alert("senha nao sao iguais");
+        return false;
+      } else {
+        return true;
+      }
     },
+  },
+  methods: {
     async createUser() {
       try {
-        console.log(this.validations());
-        if (this.validations()) {
+        const validations = this.validations;
+        if (validations) {
           const res = await this.$firebase
             .auth()
             .createUserWithEmailAndPassword(this.email, this.password);
@@ -115,15 +119,12 @@ export default {
           // this.$router.push({ name: "Home" });
           alert("criado");
         } else {
-          alert("senha invalida");
+          return;
         }
       } catch (error) {
         console.log(error);
       }
     },
-  },
-  mounted() {
-    console.log(this.$firebase);
   },
 };
 </script>
@@ -140,13 +141,11 @@ export default {
 }
 
 .img-intro {
-  background-image: url(../assets/img-tablet.png);
+  background-image: url("../assets/img-tablet.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 95%;
-  height: 250px;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  height: 200px;
 }
 
 .title {

@@ -16,14 +16,43 @@
     </div>
 
     <div class="container-card">
-      <div class="card">
-        <div class="card-header">
-          <img src="../assets/Group_1.png" />
+      <div style="background-color: #a40022" class="card">
+        <div style="background-color: #7e2033" class="card-header">
+          <div class="container-img-card">
+            <img class="img-card" src="../assets/Group_1.png" />
+          </div>
         </div>
         <div class="card-conted">
           <h3 class="title-card">Grupos de estudos</h3>
-          <span class="description-card">Descubra bibliotexas para estudo,</span>
+          <span class="description-card">Descubra bibliotecas para estudo,</span>
           <span class="description-card">grupos para te incentivar a ir mais longe!</span>
+        </div>
+      </div>
+
+      <div style="background-color: #670015" class="card">
+        <div style="background-color: #800a21" class="card-header">
+          <div class="container-img-card">
+            <img class="img-card" src="../assets/portfolio.png" />
+          </div>
+        </div>
+        <div class="card-conted">
+          <h3 class="title-card">Vagas</h3>
+          <span class="description-card">Descubra vagas de emprego de acordo,</span>
+          <span class="description-card">com sue desempenho,você tera mais</span>
+          <span class="description-card">chances de ser entrevistado!</span>
+        </div>
+      </div>
+
+      <div style="background-color: rgba(204, 204, 204, 0.897)" class="card">
+        <div style="background-color: #ccc" class="card-header">
+          <div class="container-img-card">
+            <img class="img-card" src="../assets/place.png" />
+          </div>
+        </div>
+        <div class="card-conted">
+          <h3 class="title-card">Projetos sociais</h3>
+          <span class="description-card">Pratique atividade fisicas,apoie causas e,</span>
+          <span class="description-card">esteja em constante evolucao!</span>
         </div>
       </div>
     </div>
@@ -42,6 +71,10 @@ export default {
 <style scoped>
 .home {
   padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .container-img-central {
   background-image: url("../assets/Group_7.png");
@@ -49,7 +82,6 @@ export default {
   background-repeat: no-repeat;
   height: 500px;
   width: 90%;
-  margin: 0 auto;
 }
 .divider {
   width: 3px;
@@ -87,12 +119,15 @@ export default {
   width: 100%;
   height: 400px;
   margin-top: 40px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
 }
 .card {
   width: 300px;
-  height: 250px;
-  background-color: #a40022;
   border-radius: 10px;
+  height: 300px;
 }
 .card-conted {
   padding: 0px 20px;
@@ -100,15 +135,37 @@ export default {
 .title-card {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  font-size: 25px;
+  letter-spacing: 0.8px;
 }
 .description-card {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.img-card {
+  opacity: 0.8;
+}
+.container-img-card {
+  background-color: #f5f5f554;
+  width: 70px;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card-header {
   padding: 30px;
-  border-radius: 10px;
   margin-bottom: 20px;
-  background-color: #7e2033;
+  border-radius: 10px 10px 15px 20px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .home {
+    padding: 0px;
+  }
 }
 </style>

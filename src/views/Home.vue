@@ -20,9 +20,11 @@
         <div class="card-header">
           <img src="../assets/Group_1.png" />
         </div>
-        <h3 class="title-card">Grupos de estudos</h3>
-        <span class="description-card">Descubra bibliotexas para estudo,</span>
-        <span class="description-card">grupos para te incentivar a ir mais longe!</span>
+        <div class="card-conted">
+          <h3 class="title-card">Grupos de estudos</h3>
+          <span class="description-card">Descubra bibliotexas para estudo,</span>
+          <span class="description-card">grupos para te incentivar a ir mais longe!</span>
+        </div>
       </div>
     </div>
   </div>
@@ -83,10 +85,30 @@ export default {
 }
 .container-card {
   width: 100%;
-  height: 200px;
+  height: 400px;
+  margin-top: 40px;
 }
 .card {
+  width: 300px;
+  height: 250px;
+  background-color: #a40022;
+  border-radius: 10px;
+}
+.card-conted {
+  padding: 0px 20px;
+}
+.title-card {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.description-card {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 .card-header {
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  opacity: 0;
 }
 </style>

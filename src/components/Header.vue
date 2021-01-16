@@ -2,21 +2,13 @@
   <div class="header">
     <h1 class="title">Ready to work</h1>
     <div class="container-links">
-      <router-link class="header-links" :to="{ name: 'Home' }">
-        Home |
+      <router-link class="header-links" :to="{ name: 'Home' }">Home </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }">Curriculo </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }"
+        >Oportunidades
       </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">
-        Curriculo |
-      </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">
-        Oportunidades |</router-link
-      >
-      <router-link class="header-links" :to="{ name: 'Home' }">
-        Sobre |
-      </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">
-        Sair</router-link
-      >
+      <router-link class="header-links" :to="{ name: 'Home' }">Sobre </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }">Sair</router-link>
     </div>
   </div>
 </template>
@@ -42,5 +34,19 @@ export default {};
   font-size: 20px;
   line-height: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+  display: block;
+}
+@media only screen and (max-width: 1240px) {
+  .header {
+    padding: 0px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .container-links {
+    flex-direction: column;
+  }
 }
 </style>

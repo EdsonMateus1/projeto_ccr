@@ -21,8 +21,10 @@
           <img src="../assets/Group_1.png" />
         </div>
         <h3 class="title-card">Grupos de estudos</h3>
-        <span class="description-card">Descubra bibliotexas para estudo,</span>
-        <span class="description-card">grupos para te incentivar a ir mais longe!</span>
+        <span class="description-card">Descubra bibliotecas para estudo,</span>
+        <span class="description-card"
+          >grupos para te incentivar a ir mais longe!</span
+        >
       </div>
     </div>
   </div>

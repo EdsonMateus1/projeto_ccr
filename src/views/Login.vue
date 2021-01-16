@@ -11,13 +11,7 @@
     <form @submit.prevent="createUser" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
-        <input
-          v-model="email"
-          class="input"
-          name="email"
-          type="email"
-          required
-        />
+        <input v-model="email" class="input" name="email" type="email" required />
       </div>
 
       <div class="item-form">
@@ -31,8 +25,7 @@
         />
       </div>
 
-
-      <button class="button-login" type="submit">Criar conta</button>
+      <button class="button-login" type="submit">Entrar</button>
     </form>
 
     <div class="container-access">
@@ -54,7 +47,7 @@
       </button>
       <button class="button-access">
         <svg
-          style="margin-left: 30px"
+          style="margin-left: -20px"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -221,8 +214,9 @@ export default {
   gap: 1.2em;
   margin-top: 2em;
 }
-.button-access:last-child {
-  margin-bottom: 70px;
+
+.span-access {
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {

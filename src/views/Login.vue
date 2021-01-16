@@ -32,9 +32,10 @@
       </div>
 
       <button class="button-login" type="submit">Entrar</button>
+      <button class="button-signin" type="submit">Criar conta</button>
     </form>
 
-    <!-- <div class="container-access">
+    <div class="container-access">
       <button @click.passive.stop="googleLogin" class="button-access">
         <svg
           style="margin-right: 0px"
@@ -67,10 +68,10 @@
         </svg>
         <span class="span-access">Entre com o Facebook</span>
       </button>
-    </div> -->
-    <router-link class="link-register" :to="{ name: 'Sign' }"
+    </div>
+    <!-- <router-link class="link-register" :to="{ name: 'Sign' }"
       >Faça seu cadastro</router-link
-    >
+    > -->
   </div>
 </template>
 
@@ -160,7 +161,7 @@ export default {
 .item-form {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   gap: 0.8em;
   color: #545454;
 }
@@ -191,13 +192,25 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 75%;
+  width: 70%;
   margin-top: 40px;
   border-radius: 10px;
   background-color: #fe1243;
   color: #f5f5f5;
   font-size: 20px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+
+.button-signin {
+  padding: 15px;
+  border: none;
+  margin-top: 1.4em;
+  width: 35%;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #0088ff;
+  color: #f5f5f5;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -210,7 +223,7 @@ export default {
 .button-access {
   border: 1px solid #545454;
   border-radius: 10px;
-  width: 70%;
+  width: 50%;
   font-size: 20px;
   padding: 10px;
   box-shadow: -1px 0px 4px 0px rgba(0, 0, 0, 0.6);
@@ -288,7 +301,7 @@ export default {
     width: 50%;
     height: 500px;
     position: absolute;
-    top: 35%;
+    top: 25%;
   }
 
   .title,
@@ -301,10 +314,10 @@ export default {
   }
 
   .item-form {
-    width: 90%;
+    width: 70%;
   }
   .button-login {
-    width: 90%;
+    width: 40%;
   }
 }
 </style>

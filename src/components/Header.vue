@@ -2,13 +2,21 @@
   <div class="header">
     <h1 class="title">Ready to work</h1>
     <div class="container-links">
-      <router-link class="header-links" :to="{ name: 'Home' }">Home |</router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">Curriculo |</router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }"
-        >Oportunidades |</router-link
+      <router-link class="header-links" :to="{ name: 'Home' }">
+        Home |
+      </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }">
+        Curriculo |
+      </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }">
+        Oportunidades |</router-link
       >
-      <router-link class="header-links" :to="{ name: 'Home' }">Sobre |</router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">Sair</router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }">
+        Sobre |
+      </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }">
+        Sair</router-link
+      >
     </div>
   </div>
 </template>

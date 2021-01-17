@@ -9,14 +9,14 @@
     <div class="container-logo">
       <img src="../assets/ccrlogo.png" />
       <div class="divider"></div>
-      <h2 class="title2">Viva seu caminho.</h2>
+      <h2 class="title2-home-margin title2-home">Viva seu caminho.</h2>
     </div>
 
     <div class="container-motivational-text">
       <div>
-        <h2 class="title2 title2-home">conhecimento é poder</h2>
-        <h2 class="title2 title2-home">Torne-se um investidor de ponta,</h2>
-        <h2 class="title2 title2-home">invista em você mesmo</h2>
+        <h2 class="title2-home">conhecimento é poder</h2>
+        <h2 class="title2-home">Torne-se um investidor de ponta,</h2>
+        <h2 class="title2-home">invista em você mesmo</h2>
       </div>
     </div>
 
@@ -166,14 +166,21 @@ export default {
   background-color: #000;
   margin: 0 20px;
 }
-.title2 {
+.title2-home-margin {
   position: relative;
   top: 40px;
   margin-left: 30px;
 }
+
 .title2-home {
   font-size: 40px;
   line-height: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 1;
 }
 .img-home {
   width: 80%;
@@ -259,10 +266,11 @@ export default {
   .divider {
     display: none;
   }
-  .title2 {
+  .title2-home {
     position: static;
     font-size: 20px;
     line-height: 1;
+    margin-left: 20px;
   }
   .container-motivational-text {
     margin: 0px;

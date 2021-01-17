@@ -11,6 +11,11 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+html,
+body,
+#app {
+  min-height: 100%;
+}
 
 .title {
   text-transform: uppercase;
@@ -26,6 +31,7 @@
   font-size: 40px;
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }
 
 button {
@@ -37,6 +43,5 @@ button:hover {
   cursor: pointer;
 }
 @media (min-width: 1024px) {
-  
 }
 </style>

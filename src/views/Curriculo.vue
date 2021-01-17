@@ -1,35 +1,58 @@
 <template>
   <div class="container-page-login">
+    <div class="img-curriculo"></div>
+
     <h1 class="title">Ready to Work</h1>
     <h1 class="title2">Ready to Work</h1>
 
     <h2 class="sub-title">Cadastre seu currículo</h2>
 
-    <form class="container-form">
-
+    <form @submit.prevent="createCurriculum" class="container-form">
       <div class="item-form">
         <label class="label" for="name">Nome completo:</label>
-        <input v-model="text" class="input" name="name" type="text" placeholder="Digite seu nome completo" required />
+        <input
+          v-model="name"
+          class="input"
+          name="name"
+          type="text"
+          placeholder="Digite seu nome completo"
+          required
+        />
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="telefone">Telefone:</label>
-        <input v-model="tel" class="input" name="name" type="tel" placeholder="Ex: (00) 0000-0000" required />
+        <input
+          v-model="tel"
+          class="input"
+          name="name"
+          type="tel"
+          placeholder="Ex: (00) 0000-0000"
+          required
+        />
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="area-interesse">Área de interesse:</label>
-        <input v-model="text" class="input" name="name" type="text" required />
+        <input v-model="interest" class="input" name="name" type="text" required />
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="msg">Sobre você:</label>
-        <textarea style="resize: none" v-model="text" class="msg" name="mensagem" id="msg"  rows="5" required></textarea>
+        <textarea
+          style="resize: none"
+          v-model="about"
+          class="msg"
+          name="mensagem"
+          id="msg"
+          rows="5"
+          required
+        ></textarea>
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="anexar-curriculo">Anexar currículo:</label>
-        <input  class="input" name="name" type="file" required/>
+        <input class="input" name="name" type="file" />
       </div>
 
       <button class="button-login" type="submit">Enviar</button>
@@ -38,7 +61,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      name: "",
+      tel: "",
+      interest: "",
+      about: "",
+    };
+  },
+  methods: {
+    async createCurriculum() {
+      const id = localStorage.getItem("toke-login");
+      console.log(this.$data);
+      await this.$firebase.database().ref(`user_table_${id}`).ref.set(this.$data);
+      alert("Curriculo cadastrado");
+    },
+  },
+};
 </script>
 <style>
 .container-page-login {
@@ -49,7 +89,9 @@ export default {};
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.img-curriculo {
+  display: none;
+}
 
 .title {
   margin-top: 20px;
@@ -97,7 +139,7 @@ export default {};
 }
 
 .msg {
-   border: none;
+  border: none;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
@@ -163,14 +205,14 @@ export default {};
 }
 
 @media (min-width: 1024px) {
-  
   .container-page-login {
-    margin-top: 10%;
     margin-right: 50%;
     align-items: center;
     padding: 0px;
+    margin-bottom: 70px;
+    margin-top: 30px;
   }
-  
+
   .title,
   .title2 {
     font-size: 50px;
@@ -185,6 +227,17 @@ export default {};
   }
   .button-login {
     width: 90%;
+  }
+  .img-curriculo {
+    display: block;
+    background-image: url("../assets/Scroll_Group_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: -15px;
+    right: 10px;
   }
 }
 </style>

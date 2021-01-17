@@ -37,7 +37,7 @@
       <div style="background-color: #670015" class="card">
         <div style="background-color: #800a21" class="card-header">
           <div class="container-img-card">
-            <img class="img-card" src="../assets/portfolio.png" />
+            <img class="img-card" src="../assets/Group_1.png" />
           </div>
         </div>
         <div class="card-conted">
@@ -61,6 +61,23 @@
         </div>
       </div>
     </div>
+
+    <section class="estudantes">
+      <div class="container">
+        <div class="grid-16 img-estudantes"></div>
+      </div>
+      <div class="subtitulo-curriculo">
+        <router-link class="subtitulo-curriculo" :to="{ name: 'Curriculo' }"
+          >Clique aqui
+        </router-link>
+        <h2>e publique suas notas!</h2>
+      </div>
+      <p>
+        "Daqui 20 ou 30 anos, as coisas que você não fez irão te decepcionar muito mais do
+        que aquelas que fez. <br />Portanto, corte as suas amarras e explore o universo de
+        possibilidades que lhe cercam."
+      </p>
+    </section>
 
     <div class="quebra">
       <blockquote class="quote-externo container">
@@ -130,8 +147,6 @@ export default {
 </script>
 
 <style scoped>
-.home {
-}
 .container-img-central {
   background-image: url("../assets/Group_7.png");
   background-size: contain;

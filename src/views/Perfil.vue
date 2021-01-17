@@ -1,15 +1,41 @@
 <template>
-  <div>
+  <div class="perfil">
     <Header />
-    <div class="perfil">
+
+    <div class="perfil-container">
       <div class="img-container">
         <img class="img-home" src="../assets/homem.png" />
       </div>
 
-      <div class="title2-home">
-        <h2>Meu perfil</h2>
+      <div class="center-text">
+        <div class="title2-home title2-home-margin-perfil">
+          <h2>Meu perfil</h2>
+        </div>
       </div>
     </div>
+
+    <div class="container-form">
+      <div class="item-form">
+        <label class="label">Nome:</label>
+        <span class="input flex-span">Edson</span>
+      </div>
+
+      <div class="item-form espaco-container">
+        <label class="label" for="telefone">Telefone:</label>
+        <span class="input flex-span">Edson</span>
+      </div>
+
+      <div class="item-form espaco-container">
+        <label class="label" for="area-interesse"> Área de interesse </label>
+        <span class="input flex-span">Edson</span>
+      </div>
+
+      <div class="item-form espaco-container">
+        <label class="label" for="msg">Sobre você:</label>
+        <span class="input span-text">Edson</span>
+      </div>
+    </div>
+
     <Footer />
   </div>
 </template>
@@ -25,6 +51,16 @@ export default {
 </script>
 
 <style>
+.center-text {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-span {
+  display: flex;
+  align-items: center;
+}
+
 .esconder {
   animation: esconder 1s steps(40) 0.3s normal;
 }
@@ -79,10 +115,12 @@ export default {
   opacity: 1;
 }
 
-.title2-home-margin {
-  position: relative;
-  top: 40px;
-  margin-left: 30px;
+.title2-home-margin-perfil {
+  margin: 80px 0px;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .title2-home {
@@ -108,7 +146,7 @@ export default {
 }
 
 .img-home {
-  width: 15%;
+  /* width: ; */
 }
 .container-motivational-text {
   display: flex;
@@ -146,10 +184,61 @@ export default {
   transition: all 0.3s ease-in;
 }
 
-@media only screen and (max-width: 480px) {
-  .img-container {
-    display: none;
+.container-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.item-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 0.8em;
+  color: #545454;
+}
+
+.msg {
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.input {
+  border: none;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  height: 3.5em;
+}
+.espaco-container {
+  margin: 1.2em 0px;
+}
+
+.label {
+  font-size: 22px;
+  line-height: 19.2px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #707070;
+}
+.span-text {
+  height: 200px;
+}
+
+@media only screen and (min-width: 1240px) {
+  .container-form {
+    width: 700px;
+    margin: 0 auto;
   }
+}
+
+@media only screen and (max-width: 480px) {
+  /* .img-container {
+    display: none;
+  } */
 }
 
 @media only screen and (max-width: 1100px) {
@@ -171,9 +260,9 @@ export default {
   .container-motivational-text {
     margin: 0px;
   }
-  .img-container {
+  /* .img-container {
     display: none;
-  }
+  } */
 }
 
 *,

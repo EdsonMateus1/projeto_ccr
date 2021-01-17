@@ -376,11 +376,7 @@ export default {
     width: 300px;
   }
   .oportunidades {
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-left: 150px;
   }
   .VueCarousel-slide {
     display: flex !important;
@@ -393,8 +389,8 @@ export default {
 }
 
 @media only screen and (min-width: 1240px) {
-  .container-card-carrosel {
+  /* .container-card-carrosel {
     width: 980px;
-  }
+  } */
 }
 </style>

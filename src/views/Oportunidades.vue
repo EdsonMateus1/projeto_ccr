@@ -13,7 +13,7 @@
     </div>
 
     <div class="container-motivational-text">
-      <div>
+      <div class="">
         <h2 class="esconder name title2-home">Escolha sua área de preferência</h2>
         <h2 class="esconder name title2-home">e dê seu primeiro passo</h2>
         <h2 class="esconder name title2-home">para a inserção ao mercado!</h2>
@@ -140,7 +140,6 @@ export default {
   padding: 20px;
   margin: 0 auto;
   width: 70%;
-  height: 150px;
 }
 
 .container-logo {

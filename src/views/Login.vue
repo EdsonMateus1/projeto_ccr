@@ -101,10 +101,9 @@ export default {
       alert("funcionalidade indisponivel no momento");
     },
     redirectLoggedIn() {
-      console.log("chamo");
       const id = localStorage.getItem("toke-login");
       if (id) {
-        window.location.href = "/";
+        window.location.href = "/home";
       } else {
         return;
       }

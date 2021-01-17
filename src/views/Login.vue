@@ -87,7 +87,7 @@ export default {
           .signInWithEmailAndPassword(this.email, this.password);
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
-        window.location.href = "/home";
+        this.$router.push({ name: "Home" });
       } catch (error) {
         this.loader = false;
         alert("email ou senha invalidos");
@@ -103,7 +103,7 @@ export default {
     redirectLoggedIn() {
       const id = localStorage.getItem("toke-login");
       if (id) {
-        window.location.href = "/home";
+        this.$router.push({ name: "Home" });
       } else {
         return;
       }
@@ -174,7 +174,7 @@ export default {
 .item-form {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
   gap: 0.8em;
   color: #545454;
 }
@@ -218,7 +218,7 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 63%;
+  width: 60%;
   margin-top: 20px;
   border-radius: 10px;
   background-color: #0088ff;

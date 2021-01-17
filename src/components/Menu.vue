@@ -1,6 +1,6 @@
 <template>
   <Slide>
-    <a id="home" href="/home">
+    <a id="home" href="/entrada">
       <span>Home</span>
     </a>
     <a id="curriculo" href="/curriculo">

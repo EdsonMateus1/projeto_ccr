@@ -17,7 +17,7 @@ const routes = [
       import(/* webpackChunkName: "Sign" */ "../views/Sign.vue"),
   },
   {
-    path: "/home",
+    path: "/entrada",
     name: "Home",
     component: () =>
       import(/* webpackChunkName: "Home" */ "../views/Home.vue"),

@@ -3,7 +3,7 @@
     <h1 class="title">Ready to work</h1>
     <Menu class="menu" />
     <div class="container-links">
-      <a class="header-links" href="/home">Home </a>
+      <a class="header-links" href="/entrada">Home </a>
       <router-link class="header-links" :to="{ name: 'Curriculo' }"
         >Curriculo
       </router-link>

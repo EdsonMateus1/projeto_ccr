@@ -29,7 +29,7 @@ export default {
       try {
         await this.$firebase.auth().signOut();
         localStorage.removeItem("toke-login");
-        console.log("logou");
+        // console.log("logou");
         window.location.href = "/";
       } catch (error) {
         console.log(error);

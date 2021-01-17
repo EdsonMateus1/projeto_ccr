@@ -139,7 +139,7 @@ export default {
 }
 
 .container-form {
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin-top: 1em;
@@ -181,7 +181,7 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 55%;
+  width: 70%;
   margin-top: 40px;
   border-radius: 10px;
   background-color: #fe1243;
@@ -255,6 +255,11 @@ export default {
     position: absolute;
     top: 30px;
     right: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-form {
+    width: 70%;
   }
 }
 </style>

@@ -26,7 +26,6 @@ export default {
       try {
         await this.$firebase.auth().signOut();
         localStorage.removeItem("toke-login");
-        console.log("logou");
         this.$router.push({ name: "Login" });
       } catch (error) {
         console.log(error);
@@ -54,6 +53,7 @@ export default {
 }
 .title {
   font-size: 30px;
+  margin: 0px;
 }
 .header-links {
   text-decoration: none;

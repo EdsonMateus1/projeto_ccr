@@ -389,8 +389,8 @@ export default {
 }
 
 @media only screen and (min-width: 1240px) {
-  /* .container-card-carrosel {
+  .container-card-carrosel {
     width: 980px;
-  } */
+  }
 }
 </style>

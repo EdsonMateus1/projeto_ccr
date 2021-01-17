@@ -3,7 +3,11 @@
     <Header />
 
     <div class="img-container">
-      <img class="img-home" src="../assets/Group_7.png" />
+      <img
+        class="img-home slide-up"
+        v-animate.repeat.fade="'slide-up'"
+        src="../assets/Group_7.png"
+      />
     </div>
 
     <div class="container-logo">
@@ -130,7 +134,7 @@ export default {
 
 <style scoped>
 .animate {
-  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .slide-up {
@@ -140,13 +144,15 @@ export default {
 .slide-up.animate-active {
   transform: translateX(0);
 }
+.esconder-up {
+  width: 0;
+}
 
 .box {
   /* opacity: 0; */
   /* transform: translateX(200%); */
   perspective: 1000px;
   backface-visibility: hidden;
-  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .esconder {

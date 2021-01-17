@@ -22,17 +22,26 @@
 
       <div class="item-form espaco-container">
         <label class="label" for="telefone">Telefone:</label>
-        <span class="input flex-span">Edson</span>
+        <span class="input flex-span">(31) 9999-9999</span>
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="area-interesse"> Área de interesse </label>
-        <span class="input flex-span">Edson</span>
+        <span class="input flex-span">Tecnologia</span>
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="msg">Sobre você:</label>
-        <span class="input span-text">Edson</span>
+        <span class="span-text"
+          >Estudante de Ciência da Computação, já com experiência no mercado de trabalho
+          atuando em projetos da Drogaria Araújo, busco cada vez mais o conhecimento nessa
+          área que tanto amo. Sempre me atualizando, estou atrás de novas tecnologias e
+          formas de resolver problemas aplicando todas as minhas habilidades adquiridas em
+          experiência de trabalho, cursos e faculdade. Fascinado no universo da
+          tecnologia, me sinto bastante satisfeito toda vez em que finalizo um novo
+          projeto, aprendendo conteúdos novos que me auxiliam no meu crescimento
+          profissional e pessoal!</span
+        >
       </div>
     </div>
 
@@ -138,7 +147,7 @@ export default {
 .title2-home:last-child::after {
   content: "";
   display: block;
-  width: 90%;
+  width: 100%;
   height: 10px;
   margin-top: 20px;
   margin-right: 10px;
@@ -225,7 +234,11 @@ export default {
   color: #707070;
 }
 .span-text {
-  height: 200px;
+  min-height: 200px;
+  border: none;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 @media only screen and (min-width: 1240px) {

@@ -10,7 +10,7 @@
       <router-link class="header-links" :to="{ name: 'Oportunidades' }"
         >Oportunidades
       </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">Sobre </router-link>
+      <router-link class="header-links" :to="{ name: 'Perfil' }">Meu perfil</router-link>
       <span @click.stop="logout" class="header-links">Sair</span>
     </div>
   </div>

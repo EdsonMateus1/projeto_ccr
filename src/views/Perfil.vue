@@ -1,20 +1,16 @@
-<template >
-  <div class="perfil">
-        <Header/>
-        
-        <div class="img-container">
+<template>
+  <div>
+    <Header />
+    <div class="perfil">
+      <div class="img-container">
         <img class="img-home" src="../assets/homem.png" />
-        </div>
+      </div>
 
-        <div class="esconder name title2-home">
-            <h2>Meu perfil</h2>
-        </div>
-
-        <Footer/>
-      
-        
-      
-
+      <div class="title2-home">
+        <h2>Meu perfil</h2>
+      </div>
+    </div>
+    <Footer />
   </div>
 </template>
 <script>
@@ -23,13 +19,12 @@ import Footer from "../components/Footer";
 export default {
   components: {
     Header,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>
 
-<style >
-
+<style>
 .esconder {
   animation: esconder 1s steps(40) 0.3s normal;
 }
@@ -151,8 +146,6 @@ export default {
   transition: all 0.3s ease-in;
 }
 
-
-
 @media only screen and (max-width: 480px) {
   .img-container {
     display: none;
@@ -181,9 +174,7 @@ export default {
   .img-container {
     display: none;
   }
-  
 }
-
 
 *,
 *:before,
@@ -209,5 +200,4 @@ export default {
 .container:after {
   clear: both;
 }
-
 </style>

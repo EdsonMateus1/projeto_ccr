@@ -15,9 +15,8 @@
     <div class="container-motivational-text">
       <div>
         <h2 class="esconder name title2-home">Escolha sua área de preferência</h2>
-        <h2 class="esconder name title2-home">
-          e dê seu primeiro passo para a inserção ao mercado!
-        </h2>
+        <h2 class="esconder name title2-home">e dê seu primeiro passo</h2>
+        <h2 class="esconder name title2-home">para a inserção ao mercado!</h2>
       </div>
     </div>
 
@@ -111,7 +110,7 @@ export default {
 }
 
 .title2-home {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 45px;
   text-transform: uppercase;
   font-weight: bold;
@@ -138,7 +137,7 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 30px;
+  padding: 20px;
   margin: 0 auto;
   width: 70%;
   height: 150px;
@@ -236,10 +235,8 @@ export default {
     display: none;
   }
   .title2-home {
-    position: static;
     font-size: 20px;
     line-height: 1;
-    margin-left: 20px;
   }
   .container-motivational-text {
     margin: 0px;
@@ -288,6 +285,11 @@ export default {
   }
   .card:hover {
     transform: scale(1.1);
+  }
+  .title1-margin {
+    position: static;
+    top: 0;
+    margin-left: 0px;
   }
 }
 

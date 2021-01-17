@@ -12,8 +12,8 @@ Vue.use(VueAnimate)
 Vue.use(VueCarousel);
 
 Vue.directive("scroll", {
-  inserted: function(el, binding) {
-    let f = function(evt) {
+  inserted: function (el, binding) {
+    let f = function (evt) {
       if (binding.value(evt, el)) {
         window.removeEventListener("scroll", f);
       }
@@ -27,3 +27,4 @@ new Vue({
   store,
   render: (h) => h(App),
 }).$mount("#app");
+

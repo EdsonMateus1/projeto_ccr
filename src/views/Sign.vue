@@ -8,7 +8,7 @@
     <h2 class="sub-title">Mostre os seus conhecimentos &</h2>
     <h2 class="sub-title">Receba diversas oportunidades</h2>
 
-    <form @submit.stop.prevent="createUser" class="container-form">
+    <form @submit.prevent="createUser" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
         <input v-model="email" class="input" name="email" type="email" required />
@@ -86,7 +86,8 @@ export default {
       confirmPassword: "",
     };
   },
-  computed: {
+
+  methods: {
     validations() {
       if (this.password.length <= 6 && this.confirmPassword.length <= 6) {
         alert("Senha inválida! Digite pelo menos 6 caracteres");
@@ -99,11 +100,9 @@ export default {
         return true;
       }
     },
-  },
-  methods: {
     async createUser() {
       try {
-        if (this.validations) {
+        if (this.validations()) {
           const res = await this.$firebase
             .auth()
             .createUserWithEmailAndPassword(this.email, this.password);

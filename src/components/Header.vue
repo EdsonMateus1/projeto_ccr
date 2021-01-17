@@ -11,7 +11,7 @@
         >Oportunidades
       </router-link>
       <router-link class="header-links" :to="{ name: 'Home' }">Sobre </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">Sair</router-link>
+      <router-link class="header-links" :to="{ name: 'Login' }">Sair</router-link>
     </div>
   </div>
 </template>

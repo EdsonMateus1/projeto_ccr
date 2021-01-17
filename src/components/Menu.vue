@@ -30,7 +30,7 @@ export default {
         await this.$firebase.auth().signOut();
         localStorage.removeItem("toke-login");
         console.log("logou");
-        this.$router.push({ name: "Login" });
+        window.location.href = "/";
       } catch (error) {
         console.log(error);
       }

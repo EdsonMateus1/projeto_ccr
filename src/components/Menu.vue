@@ -4,7 +4,7 @@
       <span>Home</span>
     </a>
     <a id="curriculo" href="/curriculo">
-      <span>curriculo</span>
+      <span>Currículo</span>
     </a>
     <a id="Oportunidades" href="/home">
       <span>Oportunidades</span>
@@ -12,7 +12,7 @@
     <a id="Sobre" href="/home">
       <span>Sobre</span>
     </a>
-    <a id="Sair" href="/">
+    <a id="Sair" href="/Login">
       <span>Sair</span>
     </a>
   </Slide>

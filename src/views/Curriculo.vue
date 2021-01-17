@@ -1,67 +1,81 @@
 <template>
-  <div class="container-page-login">
-    <div class="img-curriculo"></div>
+  <div class="home">
+    <Header />
+    <div class="container-page-login">
+      <h1 class="title">Ready to Work</h1>
+      <h1 class="title2">Ready to Work</h1>
 
-    <h1 class="title">Ready to Work</h1>
-    <h1 class="title2">Ready to Work</h1>
+      <h2 class="sub-title">Cadastre seu currículo</h2>
 
-    <h2 class="sub-title">Cadastre seu currículo</h2>
+      <form @submit.prevent="createCurriculum" class="container-form">
+        <div class="item-form">
+          <label class="label" for="name">Nome completo:</label>
+          <input
+            v-model="name"
+            class="input"
+            name="name"
+            type="text"
+            placeholder="Digite seu nome completo"
+            required
+          />
+        </div>
 
-    <form @submit.prevent="createCurriculum" class="container-form">
-      <div class="item-form">
-        <label class="label" for="name">Nome completo:</label>
-        <input
-          v-model="name"
-          class="input"
-          name="name"
-          type="text"
-          placeholder="Digite seu nome completo"
-          required
-        />
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="telefone">Telefone:</label>
+          <input
+            v-model="tel"
+            class="input"
+            name="name"
+            type="tel"
+            placeholder="Ex: (00) 0000-0000"
+            required
+          />
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="telefone">Telefone:</label>
-        <input
-          v-model="tel"
-          class="input"
-          name="name"
-          type="tel"
-          placeholder="Ex: (00) 0000-0000"
-          required
-        />
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="area-interesse"> Área de interesse </label>
+          <select v-model="interest" class="input" name="name" type="text" required>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Negocios">Negócios</option>
+            <option value="Negocios">Marketing</option>
+          </select>
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="area-interesse">Área de interesse:</label>
-        <input v-model="interest" class="input" name="name" type="text" required />
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="msg">Sobre você:</label>
+          <textarea
+            style="resize: none"
+            v-model="about"
+            class="msg"
+            name="mensagem"
+            id="msg"
+            rows="5"
+            required
+          ></textarea>
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="msg">Sobre você:</label>
-        <textarea
-          style="resize: none"
-          v-model="about"
-          class="msg"
-          name="mensagem"
-          id="msg"
-          rows="5"
-          required
-        ></textarea>
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="anexar-curriculo">Anexar currículo:</label>
+          <input class="input" name="name" type="file" />
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="anexar-curriculo">Anexar currículo:</label>
-        <input class="input" name="name" type="file" />
-      </div>
-
-      <button class="button-login" type="submit">Enviar</button>
-    </form>
+        <button class="button-login" type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 export default {
+  components: {
+    Footer,
+    Header,
+  },
   data() {
     return {
       name: "",
@@ -123,7 +137,7 @@ export default {
 }
 
 .container-form {
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   margin-top: 1em;
@@ -165,7 +179,7 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 75%;
+  width: 55%;
   margin-top: 40px;
   border-radius: 10px;
   background-color: #fe1243;
@@ -173,6 +187,7 @@ export default {
   font-size: 20px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
   font-weight: bold;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {

@@ -253,6 +253,46 @@ export default {
   .home {
     padding: 0px;
   }
+  .container-logo {
+    flex-direction: column;
+  }
+  .divider {
+    display: none;
+  }
+  .title2 {
+    position: static;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .container-motivational-text {
+    margin: 0px;
+  }
+  .img-container {
+    display: none;
+  }
+  .container-card {
+    gap: 20px;
+  }
+  .card {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .container-card {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+  }
 }
 
 .estudantes {

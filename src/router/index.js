@@ -34,6 +34,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Oportunidades" */ "../views/Oportunidades.vue"),
   },
+  
 ];
 
 const router = new VueRouter({

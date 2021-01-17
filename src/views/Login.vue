@@ -87,7 +87,7 @@ export default {
           .signInWithEmailAndPassword(this.email, this.password);
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
-        window.location.href = "/home";
+        this.$router.push({ name: "Home" });
       } catch (error) {
         this.loader = false;
         alert("email ou senha invalidos");
@@ -103,7 +103,7 @@ export default {
     redirectLoggedIn() {
       const id = localStorage.getItem("toke-login");
       if (id) {
-        window.location.href = "/home";
+        this.$router.push({ name: "Home" });
       } else {
         return;
       }

@@ -51,7 +51,7 @@ export default {
 }
 
 .esconder {
-  animation: esconder 1s steps(40) 0.3s normal;
+  animation: esconder 2s steps(40) 0.3s normal;
 }
 
 @keyframes esconder {

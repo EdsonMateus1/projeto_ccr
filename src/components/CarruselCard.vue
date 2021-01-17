@@ -2,251 +2,263 @@
   <div class="oportunidades">
     <div class="container-card-carrosel">
       <div>
-        <h2 class="area-interesse-title">
+        <h2 @click.stop="show = !show" class="area-interesse-title">
           TECNOLOGIA <span class="card-arrow">&#129042;</span>
         </h2>
       </div>
-      <carousel>
-        <slide>
-          <div style="background-color: #238053" class="card">
-            <div style="background-color: #207249" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+      <transition name="fade-card">
+        <carousel v-if="show">
+          <slide>
+            <div style="background-color: #238053" class="card">
+              <div style="background-color: #207249" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">EXCEL BÁSICO</h3>
+                <span class="description-card"
+                  >Aprenda o básico de excel para a sua carreira!</span
+                >
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">EXCEL BÁSICO</h3>
-              <span class="description-card"
-                >Aprenda o básico de excel para a sua carreira!</span
-              >
-            </div>
-          </div>
-        </slide>
+          </slide>
 
-        <slide>
-          <div style="background-color: #3f629a" class="card">
-            <div style="background-color: #2d5698" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          <slide>
+            <div style="background-color: #3f629a" class="card">
+              <div style="background-color: #2d5698" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">WORD</h3>
+                <span class="description-card"
+                  >Aprenda o básico de word para a sua carreira!</span
+                >
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">WORD</h3>
-              <span class="description-card"
-                >Aprenda o básico de word para a sua carreira!</span
-              >
-            </div>
-          </div>
-        </slide>
+          </slide>
 
-        <slide>
-          <div style="background-color: #d56549" class="card">
-            <div style="background-color: #d34d28" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/place.png" />
+          <slide>
+            <div style="background-color: #d56549" class="card">
+              <div style="background-color: #d34d28" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/place.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">POWERPOINT</h3>
+                <span class="description-card"
+                  >Aprenda o básico de powerpoint para a sua carreira!</span
+                >
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">POWERPOINT</h3>
-              <span class="description-card"
-                >Aprenda o básico de powerpoint para a sua carreira!</span
-              >
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          </slide>
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          </slide>
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-      </carousel>
+          </slide>
+        </carousel>
+      </transition>
     </div>
 
     <div class="container-card-carrosel">
       <div>
-        <h2 class="area-interesse-title">
+        <h2
+          @click.stop="showCardBusiness = !showCardBusiness"
+          class="area-interesse-title"
+        >
           NEGÓCIOS <span class="card-arrow">&#129042;</span>
         </h2>
       </div>
-      <carousel>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+      <transition name="fade-card">
+        <carousel v-if="showCardBusiness">
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
+          </slide>
 
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
+          </slide>
 
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          </slide>
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          </slide>
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-      </carousel>
+          </slide>
+        </carousel>
+      </transition>
     </div>
 
     <div class="container-card-carrosel">
       <div>
-        <h2 class="area-interesse-title">
+        <h2
+          @click.stop="showCardEstudent = !showCardEstudent"
+          class="area-interesse-title"
+        >
           ESTUDOS GERAIS <span class="card-arrow">&#129042;</span>
         </h2>
       </div>
-      <carousel>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+      <transition name="fade-card">
+        <carousel v-if="showCardEstudent">
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
+          </slide>
 
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
+          </slide>
 
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          </slide>
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div style="background-color: #a40022" class="card">
-            <div style="background-color: #7e2033" class="card-header">
-              <div class="container-img-card">
-                <img class="img-card" src="../assets/Group_1.png" />
+          </slide>
+          <slide>
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
               </div>
             </div>
-            <div class="card-conted">
-              <h3 class="title-card">Estudos</h3>
-              <span class="description-card">Descubra cursos essenciais </span>
-              <span class="description-card">para inserção ao mercado!</span>
-            </div>
-          </div>
-        </slide>
-      </carousel>
+          </slide>
+        </carousel>
+      </transition>
     </div>
   </div>
 </template>
@@ -258,14 +270,37 @@ export default {
     Carousel,
     Slide,
   },
+  data() {
+    return {
+      show: false,
+      showCardEstudent: false,
+      showCardBusiness: false,
+    };
+  },
 };
 </script>
 <style scoped>
+.fade-card-enter-active,
+.fade-card-leave-active {
+  transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.fade-card-enter,
+.fade-card-leave-to {
+  transform: translateX(200%);
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.area-interesse-title:hover {
+  cursor: pointer;
+}
+
 .container-card-carrosel {
   width: 100%;
-  height: 400px;
-  margin: 100px 0px;
-  padding: 0px 5px;
+  height: auto;
+  padding: 30px 5px;
+  transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .container-card {
   width: 100%;
@@ -279,10 +314,13 @@ export default {
   justify-content: center;
 }
 .card {
-  width: 90%;
+  width: 105%;
   border-radius: 10px;
   height: 300px;
   transition: all 0.3s ease-in;
+}
+.VueCarousel-slide {
+  margin: 0px 20px;
 }
 
 .card-conted {

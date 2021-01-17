@@ -29,8 +29,12 @@ export default {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 30px;
+  position: sticky;
+  top: 0px;
+  background-color: #f8f8ff;
+  z-index: 99;
 }
 .container-links {
   display: flex;
@@ -54,10 +58,11 @@ a {
 }
 @media only screen and (max-width: 800px) {
   .header {
-    padding: 0px 10px;
-    height: 100px;
+    padding: 10px 10px;
+    height: 60px;
   }
   .title {
+    font-size: 25px;
     line-height: 1;
   }
 
@@ -70,7 +75,7 @@ a {
     display: block;
     position: absolute;
     right: 90px;
-    top: -15px;
+    top: -22px;
   }
 }
 </style>

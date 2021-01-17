@@ -229,8 +229,6 @@ export default {
   .home {
     padding: 0px;
   }
-  .container-img-central {
-  }
 }
 
 .quebra {

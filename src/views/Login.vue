@@ -11,13 +11,7 @@
     <form @submit.prevent="createUser" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
-        <input
-          v-model="email"
-          class="input"
-          name="email"
-          type="email"
-          required
-        />
+        <input v-model="email" class="input" name="email" type="email" required />
       </div>
 
       <div class="item-form">
@@ -32,11 +26,12 @@
       </div>
 
       <button class="button-login" type="submit">Entrar</button>
-      <button class="button-signin" type="submit">Criar conta</button>
     </form>
 
+    <button @click.stop="redirectSign" class="button-signin">Criar conta</button>
+
     <div class="container-access">
-      <button @click.passive.stop="googleLogin" class="button-access">
+      <button @click.stop="googleLogin" class="button-access">
         <svg
           style="margin-right: 0px"
           xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +47,7 @@
         </svg>
         <span class="span-access">Entre com a conta Google</span>
       </button>
-      <button class="button-access">
+      <button @click.stop="googleLogin" class="button-access">
         <svg
           style="margin-left: -20px"
           xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +92,12 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+    redirectSign() {
+      this.$router.push({ name: "Sign" });
+    },
+    googleLogin() {
+      alert("funcionalidade indisponivel no momento");
     },
   },
 };
@@ -205,7 +206,7 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 35%;
+  width: 33%;
   margin-top: 20px;
   border-radius: 10px;
   background-color: #0088ff;

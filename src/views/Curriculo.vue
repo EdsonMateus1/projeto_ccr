@@ -60,7 +60,7 @@
           <input class="input" name="name" type="file" />
         </div>
 
-        <button class="button-login" type="submit">Enviar</button>
+        <button class="button-curriculo" type="submit">Enviar</button>
       </form>
     </div>
     <div class="footer">
@@ -96,7 +96,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .container-page-login {
   min-height: 100%;
   padding: 10px 0px 100px;
@@ -177,7 +177,7 @@ export default {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #707070;
 }
-.button-login {
+.button-curriculo {
   padding: 15px;
   border: none;
   margin-top: 1.4em;

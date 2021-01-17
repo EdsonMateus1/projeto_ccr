@@ -8,7 +8,8 @@
     <h2 class="sub-title">Mostre os seus conhecimentos &</h2>
     <h2 class="sub-title">Receba diversas oportunidades</h2>
 
-    <form @submit.prevent="doLogin" class="container-form">
+    <div v-if="loader" class="loader"></div>
+    <form v-else @submit.prevent="doLogin" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
         <input v-model="email" class="input" name="email" type="email" required />
@@ -74,11 +75,13 @@ export default {
     return {
       email: "",
       password: "",
+      loader: false,
     };
   },
   methods: {
     async doLogin() {
       try {
+        this.loader = true;
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);
@@ -249,6 +252,25 @@ export default {
 }
 .span-access {
   font-size: 16px;
+}
+
+.loader {
+  margin: 60px 0px;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #fe1243;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {

@@ -14,57 +14,61 @@
 
     <div class="container-motivational-text">
       <div>
-        <h2 class="title2-home">conhecimento é poder</h2>
-        <h2 class="title2-home">Torne-se um investidor de ponta,</h2>
-        <h2 class="title2-home">invista em você mesmo</h2>
+        <h2 class="esconder name title2-home">conhecimento é poder</h2>
+        <h2 class="esconder name title2-home">Torne-se um investidor de ponta,</h2>
+        <h2 class="esconder name title2-home">invista em você mesmo</h2>
       </div>
     </div>
 
     <div class="container-card">
-      <div style="background-color: #a40022" class="card">
-        <div style="background-color: #7e2033" class="card-header">
-          <div class="container-img-card">
-            <img class="img-card" src="../assets/Group_1.png" />
-          </div>
-        </div>
-        <div class="card-conted">
-          <h3 class="title-card">Estudos</h3>
-          <span class="description-card">Descubra cursos essenciais </span>
-          <span class="description-card">para inserção ao mercado!</span>
-        </div>
-      </div>
+      <div v-if="hide">
+        <transition name="card-animation">
+          <div class="container-card-flex">
+            <div style="background-color: #a40022" class="card">
+              <div style="background-color: #7e2033" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Estudos</h3>
+                <span class="description-card">Descubra cursos essenciais </span>
+                <span class="description-card">para inserção ao mercado!</span>
+              </div>
+            </div>
 
-      <div style="background-color: #670015" class="card">
-        <div style="background-color: #800a21" class="card-header">
-          <div class="container-img-card">
-            <img class="img-card" src="../assets/Group_1.png" />
-          </div>
-        </div>
-        <div class="card-conted">
-          <h3 class="title-card">Vagas</h3>
-          <span class="description-card"
-            >Descubra vagas de emprego e de acordo</span
-          >
-          <span class="description-card">
-            com seu desempenho, você terá mais</span
-          >
-          <span class="description-card"> chances de ser entrevistado!</span>
-        </div>
-      </div>
+            <div style="background-color: #670015" class="card">
+              <div style="background-color: #800a21" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/Group_1.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Vagas</h3>
+                <span class="description-card"
+                  >Descubra vagas de emprego e de acordo</span
+                >
+                <span class="description-card"> com seu desempenho, você terá mais</span>
+                <span class="description-card"> chances de ser entrevistado!</span>
+              </div>
+            </div>
 
-      <div style="background-color: rgba(204, 204, 204, 0.897)" class="card">
-        <div style="background-color: #ccc" class="card-header">
-          <div class="container-img-card">
-            <img class="img-card" src="../assets/place.png" />
+            <div style="background-color: rgba(204, 204, 204, 0.897)" class="card">
+              <div style="background-color: #ccc" class="card-header">
+                <div class="container-img-card">
+                  <img class="img-card" src="../assets/place.png" />
+                </div>
+              </div>
+              <div class="card-conted">
+                <h3 class="title-card">Projetos sociais</h3>
+                <span class="description-card"
+                  >Pratique atividade fisicas,apoie causas e,</span
+                >
+                <span class="description-card">esteja em constante evolucao!</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card-conted">
-          <h3 class="title-card">Projetos sociais</h3>
-          <span class="description-card"
-            >Pratique atividade fisicas,apoie causas e,</span
-          >
-          <span class="description-card">esteja em constante evolucao!</span>
-        </div>
+        </transition>
       </div>
     </div>
 
@@ -79,17 +83,17 @@
         <h2>e publique suas notas!</h2>
       </div>
       <p>
-        "Daqui 20 ou 30 anos, as coisas que você não fez irão te decepcionar
-        muito mais do que aquelas que fez. <br />Portanto, corte as suas amarras
-        e explore o universo de possibilidades que lhe cercam."
+        "Daqui 20 ou 30 anos, as coisas que você não fez irão te decepcionar muito mais do
+        que aquelas que fez. <br />Portanto, corte as suas amarras e explore o universo de
+        possibilidades que lhe cercam."
       </p>
     </section>
 
     <div class="quebra">
       <blockquote class="quote-externo container">
         <p>
-          "Cada sonho que você deixa para trás é um pedaço do seu futuro que
-          deixa de existir."
+          "Cada sonho que você deixa para trás é um pedaço do seu futuro que deixa de
+          existir."
         </p>
         <cite>STEVE JOBS</cite>
       </blockquote>
@@ -108,10 +112,44 @@ export default {
     Header,
     Footer,
   },
+  data() {
+    return {
+      hide: true,
+    };
+  },
 };
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  transform: translateX(200%);
+}
+
+.esconder {
+  animation: esconder 1s steps(40) 0.3s normal;
+}
+
+@keyframes esconder {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 500px;
+  }
+}
+.name {
+  font-size: 50px;
+  color: darkgray;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .container-img-central {
   background-image: url("../assets/Group_7.png");
   background-size: contain;
@@ -171,6 +209,8 @@ export default {
   width: 100%;
   height: 400px;
   margin-top: 8%;
+}
+.container-card-flex {
   display: flex;
   gap: 80px;
   align-items: center;
@@ -180,10 +220,17 @@ export default {
   width: 300px;
   border-radius: 10px;
   height: 300px;
+  transition: all 0.3s ease-in;
 }
+
+.card:hover {
+  transform: scale(1.2);
+}
+
 .card-conted {
   padding: 0px 20px;
 }
+
 .title-card {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;

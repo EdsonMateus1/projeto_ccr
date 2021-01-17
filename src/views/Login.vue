@@ -88,7 +88,6 @@ export default {
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
         this.$router.push({ name: "Home" });
-        alert("logo");
       } catch (error) {
         console.log(error);
       }

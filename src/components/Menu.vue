@@ -9,8 +9,8 @@
     <a id="Oportunidades" href="/oportunidades">
       <span>Oportunidades</span>
     </a>
-    <a id="Sobre" href="/home">
-      <span>Sobre</span>
+    <a id="Sobre" href="/perfil">
+      <span>Meu perfil</span>
     </a>
     <span @click.stop="logout" class="span-link" id="Sair" href="/">
       <span>Sair</span>

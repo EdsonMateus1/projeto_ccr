@@ -89,6 +89,7 @@ export default {
         localStorage.setItem("toke-login", id);
         window.location.href = "/home";
       } catch (error) {
+        this.loader = false;
         alert("email ou senha invalidos");
         console.log(error);
       }
@@ -99,6 +100,17 @@ export default {
     googleLogin() {
       alert("funcionalidade indisponivel no momento");
     },
+    redirectLoggedIn() {
+      const id = localStorage.getItem("toke-login");
+      if (id) {
+        window.location.href = "/home";
+      } else {
+        return;
+      }
+    },
+  },
+  mounted() {
+    this.redirectLoggedIn();
   },
 };
 </script>

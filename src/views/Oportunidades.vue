@@ -13,167 +13,14 @@
     </div>
 
     <div class="container-motivational-text">
-      <div>
+      <div class="">
         <h2 class="esconder name title2-home">Escolha sua área de preferência</h2>
-        <h2 class="esconder name title2-home">
-          e dê seu primeiro passo para a inserção ao mercado!
-        </h2>
+        <h2 class="esconder name title2-home">e dê seu primeiro passo</h2>
+        <h2 class="esconder name title2-home">para a inserção ao mercado!</h2>
       </div>
     </div>
 
-    <div class="container-card">
-      <div>
-        <h2 class="area-interesse-title">
-          TECNOLOGIA <span class="card-arrow">&#129042;</span>
-        </h2>
-      </div>
-      <div class="container-card-flex box" v-scroll="handleScroll">
-        <div style="background-color: #238053" class="card">
-          <div style="background-color: #207249" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">EXCEL BÁSICO</h3>
-            <span class="description-card"
-              >Aprenda o básico de excel para a sua carreira!</span
-            >
-          </div>
-        </div>
-
-        <div style="background-color: #3f629a" class="card">
-          <div style="background-color: #2d5698" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">WORD</h3>
-            <span class="description-card"
-              >Aprenda o básico de word para a sua carreira!</span
-            >
-          </div>
-        </div>
-
-        <div style="background-color: #d56549" class="card">
-          <div style="background-color: #d34d28" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/place.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">POWERPOINT</h3>
-            <span class="description-card"
-              >Aprenda o básico de powerpoint para a sua carreira!</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-card">
-      <div>
-        <h2 class="area-interesse-title">
-          NEGÓCIOS <span class="card-arrow">&#129042;</span>
-        </h2>
-      </div>
-      <div class="container-card-flex box" v-scroll="handleScroll">
-        <div style="background-color: #238053" class="card">
-          <div style="background-color: #207249" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">EXCEL BÁSICO</h3>
-            <span class="description-card"
-              >Aprenda o básico de excel para a sua carreira!</span
-            >
-          </div>
-        </div>
-
-        <div style="background-color: #3f629a" class="card">
-          <div style="background-color: #2d5698" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">WORD</h3>
-            <span class="description-card"
-              >Aprenda o básico de word para a sua carreira!</span
-            >
-          </div>
-        </div>
-
-        <div style="background-color: #d56549" class="card">
-          <div style="background-color: #d34d28" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/place.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">POWERPOINT</h3>
-            <span class="description-card"
-              >Aprenda o básico de powerpoint para a sua carreira!</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-card">
-      <div>
-        <h2 class="area-interesse-title">
-          ESTUDOS GERAIS <span class="card-arrow">&#129042;</span>
-        </h2>
-      </div>
-      <div class="container-card-flex box" v-scroll="handleScroll">
-        <div style="background-color: #238053" class="card">
-          <div style="background-color: #207249" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">EXCEL BÁSICO</h3>
-            <span class="description-card"
-              >Aprenda o básico de excel para a sua carreira!</span
-            >
-          </div>
-        </div>
-
-        <div style="background-color: #3f629a" class="card">
-          <div style="background-color: #2d5698" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">WORD</h3>
-            <span class="description-card"
-              >Aprenda o básico de word para a sua carreira!</span
-            >
-          </div>
-        </div>
-
-        <div style="background-color: #d56549" class="card">
-          <div style="background-color: #d34d28" class="card-header">
-            <div class="container-img-card">
-              <img class="img-card" src="../assets/place.png" />
-            </div>
-          </div>
-          <div class="card-conted">
-            <h3 class="title-card">POWERPOINT</h3>
-            <span class="description-card"
-              >Aprenda o básico de powerpoint para a sua carreira!</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <CardCarrusel />
     <div class="footer">
       <Footer />
     </div>
@@ -183,38 +30,27 @@
 <script>
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CardCarrusel from "../components/CarruselCard";
 export default {
   components: {
     Header,
     Footer,
-  },
-  data() {
-    return {
-      hide: true,
-    };
-  },
-  methods: {
-    handleScroll: function (evt, el) {
-      if (window.scrollY > 50) {
-        el.setAttribute("style", "opacity: 1;  transform: translateX(0);");
-      }
-      return window.scrollY > 100;
-    },
+    CardCarrusel,
   },
 };
 </script>
 
 <style scoped>
 .box {
-  opacity: 0;
-  transform: translateX(200%);
+  opacity: 1;
+  transform: translateX(0);
   perspective: 1000px;
   backface-visibility: hidden;
   transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .esconder {
-  animation: esconder 1s steps(40) 0.3s normal;
+  animation: esconder 2s steps(40) 0.3s normal;
 }
 
 @keyframes esconder {
@@ -274,7 +110,7 @@ export default {
 }
 
 .title2-home {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 45px;
   text-transform: uppercase;
   font-weight: bold;
@@ -301,10 +137,9 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 30px;
+  padding: 20px;
   margin: 0 auto;
   width: 70%;
-  height: 150px;
 }
 
 .container-logo {
@@ -399,10 +234,8 @@ export default {
     display: none;
   }
   .title2-home {
-    position: static;
     font-size: 20px;
     line-height: 1;
-    margin-left: 20px;
   }
   .container-motivational-text {
     margin: 0px;
@@ -451,6 +284,11 @@ export default {
   }
   .card:hover {
     transform: scale(1.1);
+  }
+  .title1-margin {
+    position: static;
+    top: 0;
+    margin-left: 0px;
   }
 }
 

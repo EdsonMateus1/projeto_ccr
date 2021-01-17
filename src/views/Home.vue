@@ -21,54 +21,48 @@
     </div>
 
     <div class="container-card">
-      <div v-if="hide">
-        <transition name="card-animation">
-          <div class="container-card-flex">
-            <div style="background-color: #a40022" class="card">
-              <div style="background-color: #7e2033" class="card-header">
-                <div class="container-img-card">
-                  <img class="img-card" src="../assets/Group_1.png" />
-                </div>
-              </div>
-              <div class="card-conted">
-                <h3 class="title-card">Estudos</h3>
-                <span class="description-card">Descubra cursos essenciais </span>
-                <span class="description-card">para inserção ao mercado!</span>
-              </div>
-            </div>
-
-            <div style="background-color: #670015" class="card">
-              <div style="background-color: #800a21" class="card-header">
-                <div class="container-img-card">
-                  <img class="img-card" src="../assets/Group_1.png" />
-                </div>
-              </div>
-              <div class="card-conted">
-                <h3 class="title-card">Vagas</h3>
-                <span class="description-card"
-                  >Descubra vagas de emprego e de acordo</span
-                >
-                <span class="description-card"> com seu desempenho, você terá mais</span>
-                <span class="description-card"> chances de ser entrevistado!</span>
-              </div>
-            </div>
-
-            <div style="background-color: rgba(204, 204, 204, 0.897)" class="card">
-              <div style="background-color: #ccc" class="card-header">
-                <div class="container-img-card">
-                  <img class="img-card" src="../assets/place.png" />
-                </div>
-              </div>
-              <div class="card-conted">
-                <h3 class="title-card">Projetos sociais</h3>
-                <span class="description-card"
-                  >Pratique atividade fisicas,apoie causas e,</span
-                >
-                <span class="description-card">esteja em constante evolucao!</span>
-              </div>
+      <div class="container-card-flex box" v-scroll="handleScroll">
+        <div style="background-color: #a40022" class="card">
+          <div style="background-color: #7e2033" class="card-header">
+            <div class="container-img-card">
+              <img class="img-card" src="../assets/Group_1.png" />
             </div>
           </div>
-        </transition>
+          <div class="card-conted">
+            <h3 class="title-card">Estudos</h3>
+            <span class="description-card">Descubra cursos essenciais </span>
+            <span class="description-card">para inserção ao mercado!</span>
+          </div>
+        </div>
+
+        <div style="background-color: #670015" class="card">
+          <div style="background-color: #800a21" class="card-header">
+            <div class="container-img-card">
+              <img class="img-card" src="../assets/Group_1.png" />
+            </div>
+          </div>
+          <div class="card-conted">
+            <h3 class="title-card">Vagas</h3>
+            <span class="description-card">Descubra vagas de emprego e de acordo</span>
+            <span class="description-card"> com seu desempenho, você terá mais</span>
+            <span class="description-card"> chances de ser entrevistado!</span>
+          </div>
+        </div>
+
+        <div style="background-color: rgba(204, 204, 204, 0.897)" class="card">
+          <div style="background-color: #ccc" class="card-header">
+            <div class="container-img-card">
+              <img class="img-card" src="../assets/place.png" />
+            </div>
+          </div>
+          <div class="card-conted">
+            <h3 class="title-card">Projetos sociais</h3>
+            <span class="description-card"
+              >Pratique atividade fisicas,apoie causas e,</span
+            >
+            <span class="description-card">esteja em constante evolucao!</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -117,17 +111,24 @@ export default {
       hide: true,
     };
   },
+  methods: {
+    handleScroll: function (evt, el) {
+      if (window.scrollY > 50) {
+        el.setAttribute("style", "opacity: 1;  transform: translateX(0);");
+      }
+      return window.scrollY > 100;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
+.box {
+  opacity: 0;
   transform: translateX(200%);
+  perspective: 1000px;
+  backface-visibility: hidden;
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .esconder {
@@ -290,7 +291,7 @@ export default {
   .img-container {
     display: none;
   }
-  .container-card {
+  .container-card-flex {
     gap: 20px;
   }
   .card {
@@ -299,14 +300,38 @@ export default {
 }
 
 @media only screen and (max-width: 880px) {
-  .container-card {
+  .container-card-flex {
     flex-direction: column;
     height: auto;
     gap: 30px;
     margin-bottom: 40px;
   }
+  .container-card {
+    height: auto;
+  }
+  .card {
+    width: 70%;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-card-flex {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  .container-card {
+    height: auto;
+  }
   .card {
     width: 90%;
+  }
+  .card:hover {
+    transform: scale(1.1);
   }
 }
 

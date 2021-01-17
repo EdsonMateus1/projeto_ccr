@@ -17,6 +17,7 @@ html,
 body,
 #app {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .title {

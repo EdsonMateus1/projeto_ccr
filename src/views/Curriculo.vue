@@ -1,70 +1,83 @@
 <template>
-  <div class="container-page-login">
-    <h1 class="title">Ready to Work</h1>
-    <h1 class="title2">Ready to Work</h1>
+  <div class="home">
+    <Header />
+    <div class="container-page-login">
+      <h1 class="title">Ready to Work</h1>
+      <h1 class="title2">Ready to Work</h1>
 
-    <h2 class="sub-title">Cadastre seu currículo</h2>
+      <h2 class="sub-title">Cadastre seu currículo</h2>
 
-    <form class="container-form">
-      <div class="item-form">
-        <label class="label" for="name">Nome completo</label>
-        <input
-          v-model="text"
-          class="input"
-          name="name"
-          type="text"
-          placeholder="Digite seu nome completo"
-          required
-        />
-      </div>
+      <form class="container-form">
+        <div class="item-form">
+          <label class="label" for="name">Nome completo</label>
+          <input
+            v-model="text"
+            class="input"
+            name="name"
+            type="text"
+            placeholder="Digite seu nome completo"
+            required
+          />
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="telefone">Telefone</label>
-        <input
-          v-model="tel"
-          class="input"
-          name="name"
-          type="tel"
-          placeholder="Ex: (00) 0000-0000"
-          required
-        />
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="telefone">Telefone</label>
+          <input
+            v-model="tel"
+            class="input"
+            name="name"
+            type="tel"
+            placeholder="Ex: (00) 0000-0000"
+            required
+          />
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="area-interesse"> Área de interesse </label>
-        <select v-model="text" class="input" name="name" type="text" required>
-          <option value="Tecnologia">Tecnologia</option>
-          <option value="Negocios">Negócios</option>
-          <option value="Negocios">Marketing</option>
-        </select>
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="area-interesse"> Área de interesse </label>
+          <select v-model="text" class="input" name="name" type="text" required>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Negocios">Negócios</option>
+            <option value="Negocios">Marketing</option>
+          </select>
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="msg">Sobre você</label>
-        <textarea
-          style="resize: none"
-          v-model="text"
-          class="msg"
-          name="mensagem"
-          id="msg"
-          rows="5"
-          placeholder="Me conte sobre algum projeto, algo que você gostou de ter feito. Pode ser qualquer coisa!"
-          required
-        ></textarea>
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="msg">Sobre você</label>
+          <textarea
+            style="resize: none"
+            v-model="text"
+            class="msg"
+            name="mensagem"
+            id="msg"
+            rows="5"
+            placeholder="Me conte sobre algum projeto, algo que você gostou de ter feito. Pode ser qualquer coisa!"
+            required
+          ></textarea>
+        </div>
 
-      <div class="item-form espaco-container">
-        <label class="label" for="anexar-curriculo">Anexar currículo</label>
-        <input class="input" name="name" type="file" required />
-      </div>
+        <div class="item-form espaco-container">
+          <label class="label" for="anexar-curriculo">Anexar currículo</label>
+          <input class="input" name="name" type="file" required />
+        </div>
 
-      <button class="button-login" type="submit">Enviar</button>
-    </form>
+        <button class="button-login" type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
 </script>
 <style>
 .container-page-login {

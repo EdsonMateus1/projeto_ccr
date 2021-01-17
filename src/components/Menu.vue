@@ -12,7 +12,7 @@
     <a id="Sobre" href="/home">
       <span>Sobre</span>
     </a>
-    <a id="Sair" href="/">
+    <a id="Sair" href="/Login">
       <span>Sair</span>
     </a>
   </Slide>

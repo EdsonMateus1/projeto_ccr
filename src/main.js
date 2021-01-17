@@ -4,11 +4,12 @@ import firebaseApp from "./firebase/index";
 import router from "./router";
 import store from "./store";
 import VueAnimate from 'vue-animate-scroll'
-
+import VueCarousel from 'vue-carousel';
 
 Vue.config.productionTip = false;
 Vue.use(firebaseApp);
 Vue.use(VueAnimate)
+Vue.use(VueCarousel);
 
 Vue.directive("scroll", {
   inserted: function(el, binding) {

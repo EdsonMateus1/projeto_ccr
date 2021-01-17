@@ -73,7 +73,7 @@ export default {
             .createUserWithEmailAndPassword(this.email, this.password);
           const id = res.user?.uid ?? "";
           localStorage.setItem("toke-login", id);
-          this.$router.push({ name: "Home" });
+          window.location.href = "/home";
         } else {
           return;
         }

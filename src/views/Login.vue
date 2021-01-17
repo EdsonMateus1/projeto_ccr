@@ -85,17 +85,11 @@ export default {
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);
-        console.log(res);
-        if (res.a === null) {
-          console.log(res.a);
-          alert("email ou senha invalidos");
-          // this.loader = false;
-          return;
-        }
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
         this.$router.push({ name: "Home" });
       } catch (error) {
+        alert("email ou senha invalidos");
         console.log(error);
       }
     },

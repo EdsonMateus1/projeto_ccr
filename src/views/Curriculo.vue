@@ -2,6 +2,7 @@
   <div class="home">
     <Header />
     <div class="container-page-login">
+      <div class="img-curriculo"></div>
       <h1 class="title">Ready to Work</h1>
       <h1 class="title2">Ready to Work</h1>
 
@@ -251,8 +252,8 @@ export default {
     height: 100%;
     width: 50%;
     position: absolute;
-    top: -15px;
-    right: 10px;
+    top: 30px;
+    right: 50px;
   }
 }
 </style>

@@ -228,13 +228,13 @@ export default {
   padding-bottom: 50px;
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 480px) {
   .img-container {
     display: none;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   .home {
     padding: 0px;
   }
@@ -252,11 +252,31 @@ export default {
   .container-motivational-text {
     margin: 0px;
   }
+  .img-container {
+    display: none;
+  }
+  .container-card {
+    gap: 20px;
+  }
+  .card {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
   .container-card {
     flex-direction: column;
     height: auto;
     gap: 30px;
     margin-bottom: 40px;
+  }
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
   }
 }
 

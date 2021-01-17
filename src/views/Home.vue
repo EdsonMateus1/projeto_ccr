@@ -3,7 +3,7 @@
     <Header />
 
     <div class="img-container">
-      <div class="container-img-central"></div>
+      <img class="img-home" src="../assets/Group_7.png" />
     </div>
 
     <div class="container-logo">
@@ -160,6 +160,9 @@ export default {
   font-size: 40px;
   line-height: 45px;
 }
+.img-home {
+  width: 80%;
+}
 .container-motivational-text {
   display: flex;
   align-items: flex-start;
@@ -225,9 +228,35 @@ export default {
   padding-bottom: 50px;
 }
 
+@media only screen and (max-width: 380px) {
+  .img-container {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .home {
     padding: 0px;
+  }
+  .container-logo {
+    flex-direction: column;
+  }
+  .divider {
+    display: none;
+  }
+  .title2 {
+    position: static;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .container-motivational-text {
+    margin: 0px;
+  }
+  .container-card {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    margin-bottom: 40px;
   }
 }
 

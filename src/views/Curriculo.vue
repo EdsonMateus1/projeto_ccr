@@ -6,30 +6,56 @@
     <h2 class="sub-title">Cadastre seu currículo</h2>
 
     <form class="container-form">
-
       <div class="item-form">
-        <label class="label" for="name">Nome completo:</label>
-        <input v-model="text" class="input" name="name" type="text" placeholder="Digite seu nome completo" required />
+        <label class="label" for="name">Nome completo</label>
+        <input
+          v-model="text"
+          class="input"
+          name="name"
+          type="text"
+          placeholder="Digite seu nome completo"
+          required
+        />
       </div>
 
       <div class="item-form espaco-container">
-        <label class="label" for="telefone">Telefone:</label>
-        <input v-model="tel" class="input" name="name" type="tel" placeholder="Ex: (00) 0000-0000" required />
+        <label class="label" for="telefone">Telefone</label>
+        <input
+          v-model="tel"
+          class="input"
+          name="name"
+          type="tel"
+          placeholder="Ex: (00) 0000-0000"
+          required
+        />
       </div>
 
       <div class="item-form espaco-container">
-        <label class="label" for="area-interesse">Área de interesse:</label>
-        <input v-model="text" class="input" name="name" type="text" required />
+        <label class="label" for="area-interesse"> Área de interesse </label>
+        <select v-model="text" class="input" name="name" type="text" required>
+          <option value="Tecnologia">Tecnologia</option>
+          <option value="Negocios">Negócios</option>
+          <option value="Negocios">Marketing</option>
+        </select>
       </div>
 
       <div class="item-form espaco-container">
-        <label class="label" for="msg">Sobre você:</label>
-        <textarea style="resize: none" v-model="text" class="msg" name="mensagem" id="msg"  rows="5" required></textarea>
+        <label class="label" for="msg">Sobre você</label>
+        <textarea
+          style="resize: none"
+          v-model="text"
+          class="msg"
+          name="mensagem"
+          id="msg"
+          rows="5"
+          placeholder="Me conte sobre algum projeto, algo que você gostou de ter feito. Pode ser qualquer coisa!"
+          required
+        ></textarea>
       </div>
 
       <div class="item-form espaco-container">
-        <label class="label" for="anexar-curriculo">Anexar currículo:</label>
-        <input  class="input" name="name" type="file" required/>
+        <label class="label" for="anexar-curriculo">Anexar currículo</label>
+        <input class="input" name="name" type="file" required />
       </div>
 
       <button class="button-login" type="submit">Enviar</button>
@@ -49,7 +75,6 @@ export default {};
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 .title {
   margin-top: 20px;
@@ -81,7 +106,7 @@ export default {};
 }
 
 .container-form {
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   margin-top: 1em;
@@ -97,7 +122,7 @@ export default {};
 }
 
 .msg {
-   border: none;
+  border: none;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
@@ -123,7 +148,7 @@ export default {};
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 75%;
+  width: 55%;
   margin-top: 40px;
   border-radius: 10px;
   background-color: #fe1243;
@@ -131,6 +156,7 @@ export default {};
   font-size: 20px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
   font-weight: bold;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
@@ -163,14 +189,13 @@ export default {};
 }
 
 @media (min-width: 1024px) {
-  
   .container-page-login {
     margin-top: 10%;
     margin-right: 50%;
     align-items: center;
     padding: 0px;
   }
-  
+
   .title,
   .title2 {
     font-size: 50px;

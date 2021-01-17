@@ -4,7 +4,7 @@
       <span>Home</span>
     </a>
     <a id="curriculo" href="/curriculo">
-      <span>curriculo</span>
+      <span>Currículo</span>
     </a>
     <a id="Oportunidades" href="/home">
       <span>Oportunidades</span>

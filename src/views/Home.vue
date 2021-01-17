@@ -28,9 +28,9 @@
           </div>
         </div>
         <div class="card-conted">
-          <h3 class="title-card">Grupos de estudos</h3>
-          <span class="description-card">Descubra bibliotexas para estudo,</span>
-          <span class="description-card">grupos para te incentivar a ir mais longe!</span>
+          <h3 class="title-card">Estudos</h3>
+          <span class="description-card">Descubra cursos essenciais </span>
+          <span class="description-card">para inserção ao mercado!</span>
         </div>
       </div>
 
@@ -42,9 +42,13 @@
         </div>
         <div class="card-conted">
           <h3 class="title-card">Vagas</h3>
-          <span class="description-card">Descubra vagas de emprego de acordo,</span>
-          <span class="description-card">com sue desempenho,você tera mais</span>
-          <span class="description-card">chances de ser entrevistado!</span>
+          <span class="description-card"
+            >Descubra vagas de emprego e de acordo</span
+          >
+          <span class="description-card">
+            com seu desempenho, você terá mais</span
+          >
+          <span class="description-card"> chances de ser entrevistado!</span>
         </div>
       </div>
 
@@ -56,7 +60,9 @@
         </div>
         <div class="card-conted">
           <h3 class="title-card">Projetos sociais</h3>
-          <span class="description-card">Pratique atividade fisicas,apoie causas e,</span>
+          <span class="description-card"
+            >Pratique atividade fisicas,apoie causas e,</span
+          >
           <span class="description-card">esteja em constante evolucao!</span>
         </div>
       </div>
@@ -73,17 +79,17 @@
         <h2>e publique suas notas!</h2>
       </div>
       <p>
-        "Daqui 20 ou 30 anos, as coisas que você não fez irão te decepcionar muito mais do
-        que aquelas que fez. <br />Portanto, corte as suas amarras e explore o universo de
-        possibilidades que lhe cercam."
+        "Daqui 20 ou 30 anos, as coisas que você não fez irão te decepcionar
+        muito mais do que aquelas que fez. <br />Portanto, corte as suas amarras
+        e explore o universo de possibilidades que lhe cercam."
       </p>
     </section>
 
     <div class="quebra">
       <blockquote class="quote-externo container">
         <p>
-          "Cada sonho que você deixa para trás é um pedaço do seu futuro que deixa de
-          existir."
+          "Cada sonho que você deixa para trás é um pedaço do seu futuro que
+          deixa de existir."
         </p>
         <cite>STEVE JOBS</cite>
       </blockquote>
@@ -95,8 +101,8 @@
           <div class="grid-8 footer_historia">
             <h3>Nossa História</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab ea, tempora
-              itaque laboriosam impedit tenetur.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab ea,
+              tempora itaque laboriosam impedit tenetur.
             </p>
           </div>
 
@@ -287,11 +293,6 @@ export default {
   }
   .card {
     width: 90%;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .card {
   }
 }
 

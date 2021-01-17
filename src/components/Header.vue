@@ -7,7 +7,7 @@
       <router-link class="header-links" :to="{ name: 'Curriculo' }"
         >Curriculo
       </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }"
+      <router-link class="header-links" :to="{ name: 'Oportunidades' }"
         >Oportunidades
       </router-link>
       <router-link class="header-links" :to="{ name: 'Home' }">Sobre </router-link>

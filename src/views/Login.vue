@@ -81,7 +81,7 @@ export default {
   methods: {
     async doLogin() {
       try {
-        // this.loader = true;
+        this.loader = true;
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);

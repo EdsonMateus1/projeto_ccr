@@ -3,22 +3,23 @@
     <Header />
 
     <div class="img-container js-scroll">
-      <img class="img-home" src="../assets/Group_7.png" />
+      <img class="img-home" src="../assets/img-oportunidades.png" />
     </div>
 
     <div class="container-logo">
       <img src="../assets/ccrlogo.png" />
       <div class="divider"></div>
-      <h2 class="title2-home-margin title2-home">Viva seu caminho.</h2>
+      <h2 class="title1-home title1-margin">Viva seu caminho.</h2>
     </div>
 
     <div class="container-motivational-text">
       <div>
-        <h2 class="esconder name title2-home">conhecimento é poder</h2>
         <h2 class="esconder name title2-home">
-          Torne-se um investidor de ponta,
+          Escolha sua área de preferência
         </h2>
-        <h2 class="esconder name title2-home">invista em você mesmo</h2>
+        <h2 class="esconder name title2-home">
+          e dê seu primeiro passo para a inserção ao mercado!
+        </h2>
       </div>
     </div>
 
@@ -31,9 +32,10 @@
             </div>
           </div>
           <div class="card-conted">
-            <h3 class="title-card">Estudos</h3>
-            <span class="description-card">Descubra cursos essenciais </span>
-            <span class="description-card">para inserção ao mercado!</span>
+            <h3 class="title-card">Word</h3>
+            <span class="description-card"
+              >Aprenda o básico da informática</span
+            >
           </div>
         </div>
 
@@ -70,33 +72,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <section class="estudantes">
-      <div class="container">
-        <div class="grid-16 img-estudantes"></div>
-      </div>
-      <div class="subtitulo-curriculo">
-        <router-link class="subtitulo-curriculo" :to="{ name: 'Curriculo' }"
-          >Clique aqui
-        </router-link>
-        <h2>e publique suas notas!</h2>
-      </div>
-      <p>
-        "Daqui 20 ou 30 anos, as coisas que você não fez irão te decepcionar
-        muito mais do que aquelas que fez. <br />Portanto, corte as suas amarras
-        e explore o universo de possibilidades que lhe cercam."
-      </p>
-    </section>
-
-    <div class="quebra">
-      <blockquote class="quote-externo container">
-        <p>
-          "Cada sonho que você deixa para trás é um pedaço do seu futuro que
-          deixa de existir."
-        </p>
-        <cite>STEVE JOBS</cite>
-      </blockquote>
     </div>
     <div class="footer">
       <Footer />
@@ -158,10 +133,7 @@ export default {
 }
 
 .container-img-central {
-  background-image: url("../assets/Group_7.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 450px;
+  height: 500px;
   width: 79%;
 }
 .img-container {
@@ -176,6 +148,24 @@ export default {
   background-color: #000;
   margin: 0 20px;
 }
+
+.title1-margin {
+  position: relative;
+  top: 40px;
+  margin-left: 30px;
+}
+
+.title1-home {
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 1;
+}
+
 .title2-home-margin {
   position: relative;
   top: 40px;
@@ -192,6 +182,17 @@ export default {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   opacity: 1;
 }
+
+.title2-home:last-child::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+  background-color: #fe1243;
+}
+
 .img-home {
   width: 80%;
 }
@@ -199,6 +200,7 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  padding-top: 30px;
   margin: 0 auto;
   width: 70%;
   height: 150px;
@@ -339,68 +341,6 @@ export default {
   .card:hover {
     transform: scale(1.1);
   }
-}
-
-.estudantes {
-  padding: 40px 0;
-}
-
-.estudantes {
-  background-image: url("../assets/estudantes.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-  width: 100%;
-}
-
-.subtitulo-curriculo {
-  z-index: 1;
-  color: #fe1243;
-  font-weight: bold;
-  font-size: 1.8em;
-  margin-top: 10.8%;
-  margin-left: 5%;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.subtitulo-curriculo h2 {
-  z-index: 1;
-  color: white;
-  font-weight: bold;
-  font-size: 1.8em;
-  margin-top: 10.8%;
-  margin-left: 0.8%;
-}
-
-.estudantes p {
-  color: white;
-  font-size: 0.5;
-  margin-top: 1%;
-  margin-left: 10%;
-  font-style: italic;
-}
-
-.quebra {
-  background-color: #fe1243;
-  width: 100%;
-  height: 225px;
-  background-size: cover;
-  text-align: center;
-  font-size: 20px;
-  font-style: italic;
-}
-
-.quebra .quote-externo {
-  max-width: 400px;
-  padding-top: 60px;
-}
-
-.quebra cite {
-  font-size: 40px;
-  font-weight: bold;
 }
 
 *,

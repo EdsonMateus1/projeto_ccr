@@ -6,7 +6,7 @@
     <a id="curriculo" href="/curriculo">
       <span>Currículo</span>
     </a>
-    <a id="Oportunidades" href="/home">
+    <a id="Oportunidades" href="/oportunidades">
       <span>Oportunidades</span>
     </a>
     <a id="Sobre" href="/home">

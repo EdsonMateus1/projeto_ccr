@@ -3,14 +3,18 @@
     <h1 class="title">Ready to work</h1>
     <Menu class="menu" />
     <div class="container-links">
-      <router-link class="header-links" :to="{ name: 'Home' }">Home </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }"
+        >Home
+      </router-link>
       <router-link class="header-links" :to="{ name: 'Curriculo' }"
         >Curriculo
       </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }"
+      <router-link class="header-links" :to="{ name: 'Oportunidades' }"
         >Oportunidades
       </router-link>
-      <router-link class="header-links" :to="{ name: 'Home' }">Sobre </router-link>
+      <router-link class="header-links" :to="{ name: 'Home' }"
+        >Sobre
+      </router-link>
       <span @click.stop="logout" class="header-links">Sair</span>
     </div>
   </div>

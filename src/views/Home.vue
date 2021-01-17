@@ -482,10 +482,6 @@ export default {
     width: 768px;
   }
 
-  .produtos_lista li {
-    height: 316px;
-  }
-
   .grid-1 {
     width: 28px;
   }

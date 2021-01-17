@@ -353,4 +353,10 @@ export default {
     width: 100%;
   }
 }
+
+@media only screen and (min-width: 1240px) {
+  .container-card-carrosel {
+    width: 980px;
+  }
+}
 </style>

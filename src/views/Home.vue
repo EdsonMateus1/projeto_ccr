@@ -42,7 +42,7 @@
         <div style="background-color: #670015" class="card">
           <div style="background-color: #800a21" class="card-header">
             <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
+              <img class="img-card" src="../assets/portfolio.png" />
             </div>
           </div>
           <div class="card-conted">

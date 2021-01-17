@@ -81,12 +81,15 @@ export default {
   methods: {
     async doLogin() {
       try {
-        this.loader = true;
+        // this.loader = true;
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);
-        if (res.code == "auth/wrong-password") {
+        console.log(res);
+        if (res.a === null) {
+          console.log(res.a);
           alert("email ou senha invalidos");
+          // this.loader = false;
           return;
         }
         const id = res.user?.uid ?? "";

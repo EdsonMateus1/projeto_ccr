@@ -11,7 +11,7 @@
         >Oportunidades
       </router-link>
       <router-link class="header-links" :to="{ name: 'Home' }">Sobre </router-link>
-      <router-link class="header-links" :to="{ name: 'Login' }">Sair</router-link>
+      <span @click.stop="logout" class="header-links">Sair</span>
     </div>
   </div>
 </template>
@@ -20,6 +20,18 @@ import Menu from "../components/Menu";
 export default {
   components: {
     Menu,
+  },
+  methods: {
+    async logout() {
+      try {
+        await this.$firebase.auth().signOut();
+        localStorage.removeItem("toke-login");
+        console.log("logou");
+        this.$router.push({ name: "Login" });
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
@@ -49,6 +61,9 @@ export default {
   font-size: 20px;
   line-height: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header-links:hover {
+  cursor: pointer;
 }
 a {
   display: block;

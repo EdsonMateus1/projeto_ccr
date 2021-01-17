@@ -8,7 +8,7 @@
     <h2 class="sub-title">Mostre os seus conhecimentos &</h2>
     <h2 class="sub-title">Receba diversas oportunidades</h2>
 
-    <form @submit.prevent="createUser" class="container-form">
+    <form @submit.prevent="doLogin" class="container-form">
       <div class="item-form email-container">
         <label class="label" for="email">E-mail</label>
         <input v-model="email" class="input" name="email" type="email" required />
@@ -85,6 +85,10 @@ export default {
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);
+        if (res.code == "auth/wrong-password") {
+          alert("email ou senha invalidos");
+          return;
+        }
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
         this.$router.push({ name: "Home" });

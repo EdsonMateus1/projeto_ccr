@@ -12,9 +12,9 @@
     <a id="Sobre" href="/home">
       <span>Sobre</span>
     </a>
-    <a id="Sair" href="/">
+    <span @click.stop="logout" class="span-link" id="Sair" href="/">
       <span>Sair</span>
-    </a>
+    </span>
   </Slide>
 </template>
 <script>
@@ -24,11 +24,26 @@ export default {
   components: {
     Slide,
   },
+  methods: {
+    async logout() {
+      try {
+        await this.$firebase.auth().signOut();
+        localStorage.removeItem("toke-login");
+        console.log("logou");
+        this.$router.push({ name: "Login" });
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
 };
 </script>
 <style>
 .bm-menu {
   background-color: #fe1243;
   opacity: 0.8;
+}
+.span-link:hover {
+  cursor: pointer;
 }
 </style>

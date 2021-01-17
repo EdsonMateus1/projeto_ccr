@@ -3,7 +3,11 @@
     <Header />
 
     <div class="img-container">
-      <img class="img-home" src="../assets/Group_7.png" />
+      <img
+        class="img-home slide-up"
+        v-animate.repeat.fade="'slide-up'"
+        src="../assets/Group_7.png"
+      />
     </div>
 
     <div class="container-logo">
@@ -21,7 +25,7 @@
     </div>
 
     <div class="container-card">
-      <div class="container-card-flex box" v-scroll="handleScroll">
+      <div class="container-card-flex box slide-up" v-animate.repeat.fade="'slide-up'">
         <div style="background-color: #a40022" class="card">
           <div style="background-color: #7e2033" class="card-header">
             <div class="container-img-card">
@@ -38,7 +42,7 @@
         <div style="background-color: #670015" class="card">
           <div style="background-color: #800a21" class="card-header">
             <div class="container-img-card">
-              <img class="img-card" src="../assets/Group_1.png" />
+              <img class="img-card" src="../assets/portfolio.png" />
             </div>
           </div>
           <div class="card-conted">
@@ -113,22 +117,42 @@ export default {
   },
   methods: {
     handleScroll: function (evt, el) {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         el.setAttribute("style", "opacity: 1;  transform: translateX(0);");
       }
-      return window.scrollY > 100;
+      return window.scrollY > 200;
+    },
+    handleScrollSub: function (evt, el) {
+      if (window.scrollY > 120) {
+        el.setAttribute("style", "opacity: 1;  transform: translateX(0);");
+      }
+      return window.scrollY > 200;
     },
   },
 };
 </script>
 
 <style scoped>
-.box {
-  opacity: 0;
+.animate {
+  transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.slide-up {
   transform: translateX(200%);
+}
+
+.slide-up.animate-active {
+  transform: translateX(0);
+}
+.esconder-up {
+  width: 0;
+}
+
+.box {
+  /* opacity: 0; */
+  /* transform: translateX(200%); */
   perspective: 1000px;
   backface-visibility: hidden;
-  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .esconder {

@@ -81,13 +81,13 @@ export default {
   methods: {
     async doLogin() {
       try {
-        // this.loader = true;
+        this.loader = true;
         const res = await this.$firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password);
         const id = res.user?.uid ?? "";
         localStorage.setItem("toke-login", id);
-        this.$router.push({ name: "Home" });
+        window.location.href = "/home";
       } catch (error) {
         alert("email ou senha invalidos");
         console.log(error);

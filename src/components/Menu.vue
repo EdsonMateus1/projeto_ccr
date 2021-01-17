@@ -6,7 +6,7 @@
     <a id="curriculo" href="/curriculo">
       <span>Currículo</span>
     </a>
-    <a id="Oportunidades" href="/home">
+    <a id="Oportunidades" href="/oportunidades">
       <span>Oportunidades</span>
     </a>
     <a id="Sobre" href="/home">
@@ -29,7 +29,7 @@ export default {
       try {
         await this.$firebase.auth().signOut();
         localStorage.removeItem("toke-login");
-        console.log("logou");
+        // console.log("logou");
         window.location.href = "/";
       } catch (error) {
         console.log(error);

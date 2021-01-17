@@ -174,7 +174,7 @@ export default {
 .item-form {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
   gap: 0.8em;
   color: #545454;
 }
@@ -218,7 +218,7 @@ export default {
   padding: 15px;
   border: none;
   margin-top: 1.4em;
-  width: 63%;
+  width: 60%;
   margin-top: 20px;
   border-radius: 10px;
   background-color: #0088ff;

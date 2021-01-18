@@ -299,7 +299,7 @@ export default {
 .container-card-carrosel {
   width: 100%;
   height: auto;
-  padding: 30px 5px;
+  padding: 30px 10px;
   transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .container-card {

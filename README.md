@@ -8,7 +8,7 @@
 <br>
 <br>
 
-> Conhecimento é poder Torne-se um investidor de ponta, Invista em você mesmo.Plataforma ready to work criada com intuito de ajudar jovens a entrarem no mercado de trabalho.
+> Ready to Work é uma plataforma on-line onde usuários cadastrados terão acesso a diversos benefícios, vagas de emprego, cursos para inserção ao mercado e muito mais!
 
 
 

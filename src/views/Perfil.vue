@@ -59,11 +59,11 @@ export default {
     async getUserInfo() {
       const id = localStorage.getItem("toke-login");
       const res = await this.$firebase.database().ref(`user_table_${id}`).once("value");
-      const data = res.val();
-      this.about = data.about;
-      this.interest = data.interest;
-      this.name = data.name;
-      this.tel = data.tel;
+      const data = res.val() ?? "";
+      this.about = data.about ?? "";
+      this.interest = data.interest ?? "";
+      this.name = data.name ?? "";
+      this.tel = data.tel ?? "";
     },
   },
 

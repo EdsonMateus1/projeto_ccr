@@ -91,7 +91,7 @@ export default {
       console.log(this.$data);
       await this.$firebase.database().ref(`user_table_${id}`).ref.set(this.$data);
       alert("Curriculo cadastrado");
-      this.$router.push({ name: "Home" });
+      window.location.href = "/entrada";
     },
   },
 };

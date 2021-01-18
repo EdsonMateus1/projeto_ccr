@@ -17,31 +17,22 @@
     <div class="container-form">
       <div class="item-form">
         <label class="label">Nome:</label>
-        <span class="input flex-span">Edson</span>
+        <span class="input flex-span">{{ name }}</span>
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="telefone">Telefone:</label>
-        <span class="input flex-span">(31) 9999-9999</span>
+        <span class="input flex-span">{{ tel }}</span>
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="area-interesse"> Área de interesse </label>
-        <span class="input flex-span">Tecnologia</span>
+        <span class="input flex-span">{{ interest }}</span>
       </div>
 
       <div class="item-form espaco-container">
         <label class="label" for="msg">Sobre você:</label>
-        <span class="span-text"
-          >Estudante de Ciência da Computação, já com experiência no mercado de trabalho
-          atuando em projetos da Drogaria Araújo, busco cada vez mais o conhecimento nessa
-          área que tanto amo. Sempre me atualizando, estou atrás de novas tecnologias e
-          formas de resolver problemas aplicando todas as minhas habilidades adquiridas em
-          experiência de trabalho, cursos e faculdade. Fascinado no universo da
-          tecnologia, me sinto bastante satisfeito toda vez em que finalizo um novo
-          projeto, aprendendo conteúdos novos que me auxiliam no meu crescimento
-          profissional e pessoal!</span
-        >
+        <span class="span-text">{{ about }}</span>
       </div>
     </div>
 
@@ -55,6 +46,29 @@ export default {
   components: {
     Header,
     Footer,
+  },
+  data() {
+    return {
+      about: "",
+      interest: "",
+      name: "",
+      tel: "",
+    };
+  },
+  methods: {
+    async getUserInfo() {
+      const id = localStorage.getItem("toke-login");
+      const res = await this.$firebase.database().ref(`user_table_${id}`).once("value");
+      const data = res.val();
+      this.about = data.about;
+      this.interest = data.interest;
+      this.name = data.name;
+      this.tel = data.tel;
+    },
+  },
+
+  async mounted() {
+    await this.getUserInfo();
   },
 };
 </script>
